@@ -14,5 +14,7 @@
 # define PIPEX_H
 
 # include "../libft/includes/libft.h"
+# include <unistd.h>
+# include <sys/wait.h>
 
 #endif
