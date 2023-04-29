@@ -6,7 +6,7 @@
 #    By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 14:36:56 by dpentlan          #+#    #+#              #
-#    Updated: 2023/02/11 18:27:34 by dpentlan         ###   ########.fr        #
+#    Updated: 2023/04/29 11:56:05 by dpentlan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,29 +109,32 @@ SLIB = ar rcs
 all: $(NAME)
 
 $(NAME): $(ALL_OBJS)
-	$(SLIB) $(NAME) -o $(ALL_OBJS)
+	@echo "===== MAKING LIBFT ====="
+	@$(SLIB) $(NAME) -o $(ALL_OBJS)
 
 m: $(OBJS)
-	$(SLIB) $(NAME) -o $(OBJS)
+	@echo "===== MAKING LIBFT MANDATORY ONLY ====="
+	@$(SLIB) $(NAME) -o $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
+	@echo "===== MAKING LIBFT BONUS ONLY ====="
+	@$(SLIB) $(NAME) -o $(OBJS) $(BONUS_OBJS)
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 	@mkdir -p $(OBJS_DIR)
-	$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
+	@$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
 
 $(BONUS_OBJS_DIR)%.o: $(BONUS_SRCS_DIR)%.c
 	@mkdir -p $(BONUS_OBJS_DIR)
-	$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
+	@$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
 
 $(GNL_OBJS_DIR)%.o: $(GNL_SRCS_DIR)%.c
 	@mkdir -p $(GNL_OBJS_DIR)
-	$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
+	@$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
 
 $(FT_PRINTF_OBJS_DIR)%.o: $(FT_PRINTF_SRCS_DIR)%.c
 	@mkdir -p $(FT_PRINTF_OBJS_DIR)
-	$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
+	@$(CC) $(CFLAGS) -c -I$(INCS_DIR) $< -o $@
 
 clean:
 	@rm -f $(OBJS) $(BONUS_OBJS) $(GNL_OBJS) $(FT_PRINTF_OBJS)
