@@ -15,7 +15,10 @@
 int	main(int argc, char **argv, char **envp)
 {
 	t_pipex	*pipex;
+	int		opened_file;
 
+	if (envp) {}
+	opened_file = 0;
 	if (argc < 5)
 		return (px_error(), 1);
 	pipex = (t_pipex *)malloc(1 * sizeof(t_pipex));
@@ -25,8 +28,13 @@ int	main(int argc, char **argv, char **envp)
 		return (free(pipex), 1);
 
 	// Not how youre supposed to do this.
-	if (px_access_check(argc, argv, envp))
-		return (1);
+	//if (px_access_check(argc, argv, envp))
+	//	return (1);
+
+	// need to put file into stdin at first. access and all that to error check.
+	opened_file = open(argv[1], O_RDONLY);
+	dup2(opened_file, STDIN_FILENO);
+	close(opened_file);
 
 	pipex->pid1 = fork();
 	if (pipex->pid1 == 0)
