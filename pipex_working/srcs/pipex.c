@@ -14,35 +14,37 @@
 
 int	main(int argc, char **argv, char **envp)
 {
-	if (argc) {}
-	if (argv) {}
-	if (envp) {}
-
 	t_pipex	*pipex;
 
+	if (argc < 5)
+		return (px_error(), 1);
 	pipex = (t_pipex *)malloc(1 * sizeof(t_pipex));
 	if (!pipex)
 		return (1);
 	if (pipe(pipex->fds))
 		return (free(pipex), 1);
 
+	// Not how youre supposed to do this.
+	if (px_access_check(argc, argv, envp))
+		return (1);
+
 	pipex->pid1 = fork();
 	if (pipex->pid1 == 0)
 	{
-		char *args[] = {"/usr/bin/ping", "ping", "-c", "5", "google.com", NULL};
+		char *args[] = {"/usr/bin/ping", "ping", "-c", "1", "google.com", NULL};
 		ft_printf("checking %s: result %d\n", args[0], access(args[0], F_OK | X_OK));
 		dup2(pipex->fds[1], STDOUT_FILENO);
 		close(pipex->fds[0]);
 		close(pipex->fds[1]);
 		execve(args[0], args + 1, NULL);
 	}
-
 	pipex->pid2 = fork();
 	if (pipex->pid2 == 0)
 	{
 		char *args[] = {"/usr/bin/grep", "grep", "rtt", NULL};
 		ft_printf("checking %s: result %d\n", args[0], access(args[0], F_OK | X_OK));
 		dup2(pipex->fds[0], STDIN_FILENO);
+		dup2(pipex->fds[1], STDOUT_FILENO);
 		close(pipex->fds[0]);
 		close(pipex->fds[1]);
 		execve(args[0], args + 1, NULL);

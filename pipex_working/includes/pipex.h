@@ -27,6 +27,10 @@ typedef struct	s_pipex {
 //	int main (int argc, char **argv, char **envp);
 
 //	pipex_utils_1.c
+int		px_error(void);
+void	ft_free_tab(char **table);
+char	*px_env_check(int com, char **argv, char **envp);
+int		px_access_check(int argc, char **argv, char **envp);
 
 
 #endif
