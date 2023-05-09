@@ -16,11 +16,13 @@
 # include "../libft/includes/libft.h"
 # include <unistd.h>
 # include <sys/wait.h>
+# include <error.h>
 
 typedef struct	s_pipex {
 	int 		fds[2];
 	pid_t		pid1;
 	pid_t		pid2;
+	char		***table of tables
 }				t_pipex;
 
 //	pipex.c
