@@ -12,10 +12,16 @@
 
 #include "pipex.h"
 
-int	px_error(void)
+int	px_error(char *err_message)
 {
-	write(1, "ERROR\n", 6);
-	return (0);
+	perror(err_message);
+	exit(EXIT_FAILURE);
+}
+
+int px_err_args(void)
+{
+	ft_putstr_fd("Usage: pipex [infile] ['command'] ... [outfile]\n", 1);
+	exit(EXIT_FAILURE);
 }
 
 void	ft_free_tab(char **table)
