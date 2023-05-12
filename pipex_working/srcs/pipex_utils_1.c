@@ -12,9 +12,12 @@
 
 #include "pipex.h"
 
-int	px_error(char *err_message)
+int	px_error(t_pipex *pipex, char *err_message)
 {
+	if (pipex->cmd_args)
+		ft_free_tab(pipex->cmd_args);
 	perror(err_message);
+	px_close_fds(pipex);
 	exit(EXIT_FAILURE);
 }
 
@@ -22,6 +25,44 @@ int px_err_args(void)
 {
 	ft_putstr_fd("Usage: pipex [infile] ['command'] ... [outfile]\n", 1);
 	exit(EXIT_FAILURE);
+}
+
+int	ft_infile(t_pipex *pipex)
+{
+	int		in_file;
+
+	in_file = 0;
+	if (access(pipex->argv[1], F_OK | R_OK))
+		px_error(pipex, "access");
+	in_file = open(pipex->argv[1], O_RDONLY);
+	if (in_file < 0)
+		px_error(pipex, "open");
+	dup2(in_file, STDIN_FILENO);
+	close(in_file);
+	return (0);
+}
+
+int	ft_outfile(t_pipex *pipex)
+{
+	int		out_file;
+
+	out_file = 0;
+	out_file = open(pipex->argv[pipex->argc - 1], O_CREAT | O_WRONLY, 0666);
+	if (out_file < 0)
+		px_error(pipex, "open");
+	dup2(out_file, STDOUT_FILENO);
+	close(out_file);
+	return (0);
+}
+
+int	ft_px_init(t_pipex *pipex, int argc, char **argv, char **envp)
+{
+	if (argc < 5)
+		return (px_err_args(), 1);
+	pipex->argc = argc;
+	pipex->argv = argv;
+	pipex->envp = envp;
+	return (0);
 }
 
 void	ft_free_tab(char **table)
@@ -53,92 +94,45 @@ char	*px_get_path(char **envp)
 	return (0);
 }
 
-char	*px_add_abs_path(char *command, char **envp)
+void	px_get_execargs(t_pipex *pipex, int com_num)
 {
-	char	**path_tab;
-	char	**path_tab_start;
-	char	*path;
-	char	*full_path;
-	char	*fuller_path;
+	pipex->cmd_args = ft_split(pipex->argv[com_num], ' ');
+	if (!pipex->cmd_args)
+		px_error(pipex, "malloc");
+}
 
-	full_path = 0;
-	fuller_path = 0;
-	path = 0;
-	path_tab = 0;
-	path = px_get_path(envp);
-	if (!path)
-		return (0);
-	path = path + 5;
-	path_tab = ft_split(path, ':');
-	if (!path_tab)
-		return (0);
-	path_tab_start = path_tab;
-	while (*path_tab)
+void	px_get_abspath(t_pipex *pipex)
+{
+	if (pipex->cmd_args[0][0] == '/')
+		pipex->cmd_abspath = pipex->cmd_args[0];
+	else
 	{
-		full_path = ft_strjoin(*path_tab, "/");
-		if (!full_path)
-		{
-			ft_free_tab(path_tab_start);
-			return (0);
-		}
-		fuller_path = ft_strjoin(full_path, command);
-		free(full_path);
-		//ft_printf("fuller_path = %s\n", fuller_path);
-		if (!fuller_path)
-		{
-			ft_free_tab(path_tab_start);
-			return (0);
-		}
-		if (!access(fuller_path, F_OK | X_OK))
-		{
-			ft_free_tab(path_tab_start);
-			return (fuller_path);
-		}
-		free(fuller_path);
-		path_tab++;
+
 	}
-	ft_free_tab(path_tab_start);
-	//ft_printf("bruhhhh.\n");
+	if (access(pipex->cmd_abspath, F_OK | X_OK))	
+		px_error(pipex, "access");
+}
+
+int	px_exec_args(t_pipex *pipex)
+{
+	static int	com_num;
+
+	if (pipex) {}
+	if (com_num == 0)
+		com_num = 2;
+	else
+		com_num++;
+	px_get_execargs(pipex, com_num);
+	//ft_printf("pipex->cmd_args[0] = %s\n", pipex->cmd_args[0]);
+	px_get_abspath(pipex);
 	return (0);
 }
 
-char	*px_env_check(int com, char **argv, char **envp)
+void	px_close_fds(t_pipex *pipex)
 {
-	char	**buf_table;
-	char	*full_path;
-
-	full_path = 0;
-	buf_table = ft_split(argv[com], ' ');
-	if (!buf_table || !buf_table[0])
-		return (0);
-	//ft_printf("%s\n", buf_table[0]);
-	if (buf_table[0][0] != '/')
-		full_path = px_add_abs_path(buf_table[0], envp);
-	ft_free_tab(buf_table);
-	return (full_path);
+	close(STDIN_FILENO);
+	close(STDOUT_FILENO);
+	close(STDERR_FILENO);
+	close(pipex->fds[0]);
+	close(pipex->fds[1]);
 }
-
-int	px_access_check(int argc, char **argv, char **envp)
-{
-	int		i;
-	char	*full_path;
-
-	i = 2;
-	if (access(argv[1], F_OK | W_OK))
-		return (-1);
-	if (access(argv[argc - 1], F_OK | W_OK))
-		return (-1);
-	while (i < argc - 1)
-	{
-		full_path = px_env_check(i, argv, envp);
-		if (!full_path)
-		{
-			free(full_path);
-			return (-1);
-		}
-		free(full_path);
-		i++;
-	}
-	return (0);
-}
-
