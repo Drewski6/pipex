@@ -20,13 +20,13 @@
 
 typedef struct	s_pipex {
 	int 		fds[2];
-	pid_t		pid1;
-	pid_t		pid2;
+	pid_t		pid;
 	int			argc;
 	char		**argv;
 	char		**envp;
 	char		*cmd_abspath;
 	char		**cmd_args;
+	char		**path_tab;
 }				t_pipex;
 
 //	pipex.c
