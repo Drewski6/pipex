@@ -22,61 +22,9 @@ int	main(int argc, char **argv, char **envp)
 	if (pipe(pipex->fds))
 		px_error(pipex, "pipe");
 	ft_infile(pipex);
-
-// BIG NOTE TO ME: Access failure should not stop execution of the program, only print a note saying that the file wasnt found.
-// then execution should continue
-
-// fork loop start here //
-	px_exec_args(pipex);
-	pipex->pid = fork();
-	if (pipex->pid < 0)
-		px_error(pipex, "fork");
-	else if (pipex->pid == 0)
-	{
-		dup2(pipex->fds[1], STDOUT_FILENO);
-		close(pipex->fds[0]);
-		close(pipex->fds[1]);
-		execve(pipex->cmd_abspath, pipex->cmd_args, NULL);
-	}
-	waitpid(pipex->pid, NULL, 0);
-	if (pipex->cmd_args)
-	{
-		ft_free_tab(pipex->cmd_args);
-		pipex->cmd_args = 0;
-	}
-	if (pipex->cmd_abspath)
-	{
-		free(pipex->cmd_abspath);
-		pipex->cmd_abspath = 0;
-	}
-// fork loop end here //
-
+	px_fork(pipex, 0);
 	ft_outfile(pipex);
-
-	px_exec_args(pipex);
-	pipex->pid = fork();
-	if (pipex->pid < 0)
-		px_error(pipex, "fork");
-	if (pipex->pid == 0)
-	{
-		dup2(pipex->fds[0], STDIN_FILENO);
-		close(pipex->fds[0]);
-		close(pipex->fds[1]);
-		execve(pipex->cmd_abspath, pipex->cmd_args, NULL);
-	}
-	close(pipex->fds[1]);
-	waitpid(pipex->pid, NULL, 0);
-	if (pipex->cmd_args)
-	{
-		ft_free_tab(pipex->cmd_args);
-		pipex->cmd_args = 0;
-	}
-	if (pipex->cmd_abspath)
-	{
-		free(pipex->cmd_abspath);
-		pipex->cmd_abspath = 0;
-	}
-
+	px_fork(pipex, 1);
 	if (pipex->path_tab)
 	{
 		ft_free_tab(pipex->path_tab);

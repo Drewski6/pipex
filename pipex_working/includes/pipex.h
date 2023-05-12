@@ -51,5 +51,7 @@ void	px_get_abspath(t_pipex *pipex);
 void	px_get_execargs(t_pipex *pipex, int com_num);
 
 //	pipex_fork_utils_1.c
+void	px_child_process(t_pipex *pipex, int fork_type);
+int		px_fork(t_pipex *pipex, int fork_type);
 
 #endif
