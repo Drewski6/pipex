@@ -23,6 +23,9 @@ int	main(int argc, char **argv, char **envp)
 		px_error(pipex, "pipe");
 	ft_infile(pipex);
 
+// BIG NOTE TO ME: Access failure should not stop execution of the program, only print a note saying that the file wasnt found.
+// then execution should continue
+
 // fork loop start here //
 	px_exec_args(pipex);
 	pipex->pid = fork();
@@ -61,15 +64,12 @@ int	main(int argc, char **argv, char **envp)
 		close(pipex->fds[1]);
 		execve(pipex->cmd_abspath, pipex->cmd_args, NULL);
 	}
+	close(pipex->fds[1]);
+	waitpid(pipex->pid, NULL, 0);
 	if (pipex->cmd_args)
 	{
 		ft_free_tab(pipex->cmd_args);
 		pipex->cmd_args = 0;
-	}
-	if (pipex->path_tab)
-	{
-		ft_free_tab(pipex->path_tab);
-		pipex->path_tab = 0;
 	}
 	if (pipex->cmd_abspath)
 	{
@@ -77,7 +77,11 @@ int	main(int argc, char **argv, char **envp)
 		pipex->cmd_abspath = 0;
 	}
 
+	if (pipex->path_tab)
+	{
+		ft_free_tab(pipex->path_tab);
+		pipex->path_tab = 0;
+	}
 	px_close_fds(pipex);
-	waitpid(pipex->pid, NULL, 0);
 	return (0);
 }
