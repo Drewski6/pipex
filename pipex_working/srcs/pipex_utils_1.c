@@ -48,9 +48,11 @@ int	ft_infile(t_pipex *pipex)
 int	ft_outfile(t_pipex *pipex)
 {
 	int		out_file;
+	char	*fn;
 
 	out_file = 0;
-	out_file = open(pipex->argv[pipex->argc - 1], O_CREAT | O_WRONLY | O_TRUNC, 0666);
+	fn = pipex->argv[pipex->argc - 1];
+	out_file = open(fn, O_CREAT | O_WRONLY | O_TRUNC, 0666);
 	if (out_file < 0)
 		px_error(pipex, "open");
 	dup2(out_file, STDOUT_FILENO);
@@ -83,113 +85,4 @@ void	ft_free_tab(char **table)
 	}
 	free(table);
 	return ;
-}
-
-void	px_path_tab_add_fw_slash(t_pipex *pipex)
-{
-	int		i;
-	char	*buf;
-
-	i = 0;
-	buf = 0;
-	while (pipex->path_tab[i])
-	{
-		if (pipex->path_tab[i][ft_strlen(pipex->path_tab[i]) - 1] != '/')
-		{
-			buf = ft_strjoin(pipex->path_tab[i], "/");
-			free(pipex->path_tab[i]);
-			pipex->path_tab[i] = buf;
-			if (!pipex->path_tab[i])
-				px_error(pipex, "malloc");
-		}
-		i++;
-	}
-}
-
-void	px_get_path_tab(t_pipex *pipex)
-{
-	char	*path;
-	char	**env_elem;
-
-	path = 0;
-	env_elem = pipex->envp;
-	while (*env_elem)
-	{
-		path = ft_strnstr(*env_elem, "PATH=", 5);
-		if (path)
-			break ;
-		env_elem++;
-	}
-	if (!*env_elem)
-		px_error(pipex, "no_path");
-	pipex->path_tab = ft_split(path + 5, ':');
-	if (!pipex->path_tab)
-		px_error(pipex, "malloc");
-	px_path_tab_add_fw_slash(pipex);
-}
-
-void	px_build_abspath(t_pipex *pipex)
-{
-	int	i;
-
-	i = 0;
-	while (pipex->path_tab[i])
-	{
-		if (pipex->cmd_abspath)
-			free(pipex->cmd_abspath);
-		pipex->cmd_abspath = ft_strjoin(pipex->path_tab[i], pipex->cmd_args[0]);
-		if (!pipex->cmd_abspath)
-			px_error(pipex, "malloc");
-		if (!access(pipex->cmd_abspath, F_OK | X_OK))
-			break ;
-		i++;
-	}
-}
-
-void	px_get_abspath(t_pipex *pipex)
-{
-	if (pipex->cmd_args[0][0] == '/')
-	{
-		pipex->cmd_abspath = ft_strdup(pipex->cmd_args[0]);
-		if (!pipex->cmd_abspath)
-			px_error(pipex, "malloc");
-	}
-	else
-	{
-		if (!pipex->path_tab)
-			px_get_path_tab(pipex);
-		px_build_abspath(pipex);
-	}
-	if (access(pipex->cmd_abspath, F_OK | X_OK))	
-		px_error(pipex, "access");
-}
-
-void	px_get_execargs(t_pipex *pipex, int com_num)
-{
-	pipex->cmd_args = ft_split(pipex->argv[com_num], ' ');
-	if (!pipex->cmd_args)
-		px_error(pipex, "malloc");
-}
-
-int	px_exec_args(t_pipex *pipex)
-{
-	static int	com_num;
-
-	if (pipex) {}
-	if (com_num == 0)
-		com_num = 2;
-	else
-		com_num++;
-	px_get_execargs(pipex, com_num);
-	px_get_abspath(pipex);
-	return (0);
-}
-
-void	px_close_fds(t_pipex *pipex)
-{
-	close(STDIN_FILENO);
-	close(STDOUT_FILENO);
-	close(STDERR_FILENO);
-	close(pipex->fds[0]);
-	close(pipex->fds[1]);
 }

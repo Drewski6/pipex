@@ -19,6 +19,9 @@ NOCOLOR='\033[0m'
 
 SRCS = pipex.c \
 	pipex_utils_1.c \
+	pipex_utils_2.c \
+	pipex_path_utils_1.c \
+	pipex_fork_utils_1.c \
 
 SRCS_DIR = srcs/
 
