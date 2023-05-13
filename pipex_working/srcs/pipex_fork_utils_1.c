@@ -32,7 +32,7 @@ void	px_child_process(t_pipex *pipex)
 		px_error(pipex, pipex->cmd_args[0]);
 	if (pipex->com_num == 2)
 	{
-		ft_infile(pipex);
+		px_infile(pipex);
 		dup2(pipex->pipe[1], STDOUT_FILENO);
 	}
 	else if (pipex->com_num != pipex->argc - 2)
@@ -42,7 +42,7 @@ void	px_child_process(t_pipex *pipex)
 	}
 	else if (pipex->com_num == pipex->argc - 2)
 	{
-		ft_outfile(pipex);
+		px_outfile(pipex);
 		dup2(pipex->prev_pipe, STDIN_FILENO);
 	}
 	px_pre_exec_cleanup(pipex);

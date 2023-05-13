@@ -12,7 +12,7 @@
 
 #include "pipex.h"
 
-int	ft_px_init(t_pipex *pipex, int argc, char **argv, char **envp)
+int	px_init(t_pipex *pipex, int argc, char **argv, char **envp)
 {
 	pipex->pipe[0] = 0;
 	pipex->pipe[1] = 0;

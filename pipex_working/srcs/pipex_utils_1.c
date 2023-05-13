@@ -39,7 +39,7 @@ int	px_error(t_pipex *pipex, char *err_message)
 	exit(EXIT_FAILURE);
 }
 
-int	ft_infile(t_pipex *pipex)
+int	px_infile(t_pipex *pipex)
 {
 	int		in_file;
 
@@ -62,7 +62,7 @@ int	ft_infile(t_pipex *pipex)
 	return (0);
 }
 
-int	ft_outfile(t_pipex *pipex)
+int	px_outfile(t_pipex *pipex)
 {
 	int		out_file;
 	char	*fn;
