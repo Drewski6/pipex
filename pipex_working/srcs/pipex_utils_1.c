@@ -21,13 +21,39 @@ int	px_error(t_pipex *pipex, char *err_message)
 	else
 		perror(err_message);
 	if (pipex->cmd_abspath)
+	{
 		free(pipex->cmd_abspath);
+		pipex->cmd_abspath = 0;
+	}
 	if (pipex->cmd_args)
+	{
 		ft_free_tab(pipex->cmd_args);
+		pipex->cmd_args = 0;
+	}
 	if (pipex->path_tab)
+	{
 		ft_free_tab(pipex->path_tab);
+		pipex->path_tab = 0;
+	}
 	px_close_fds(pipex);
 	exit(EXIT_FAILURE);
+}
+
+int	px_error_nonfatal(t_pipex *pipex, char *err_message)
+{
+	if (pipex) {}
+	perror(err_message);
+	//if (pipex->cmd_abspath)
+	//{
+	//	free(pipex->cmd_abspath);
+	//	pipex->cmd_abspath = 0;
+	//}
+	//if (pipex->cmd_args)
+	//{
+	//	ft_free_tab(pipex->cmd_args);
+	//	pipex->cmd_args = 0;
+	//}
+	return (0);
 }
 
 int	ft_infile(t_pipex *pipex)
@@ -35,8 +61,16 @@ int	ft_infile(t_pipex *pipex)
 	int		in_file;
 
 	in_file = 0;
-	if (access(pipex->argv[1], F_OK | R_OK))
-		px_error(pipex, "access");
+	if (pipex->temp_used < 0)
+	{
+		perror(pipex->argv[1]);
+		in_file = open("/tmp/pipex", O_CREAT | O_RDONLY, 0666);
+		if (in_file < 0)
+			px_error(pipex, "open");
+		dup2(in_file, STDIN_FILENO);
+		close(in_file);
+		return (1);
+	}
 	in_file = open(pipex->argv[1], O_RDONLY);
 	if (in_file < 0)
 		px_error(pipex, "open");
@@ -57,19 +91,6 @@ int	ft_outfile(t_pipex *pipex)
 		px_error(pipex, "open");
 	dup2(out_file, STDOUT_FILENO);
 	close(out_file);
-	return (0);
-}
-
-int	ft_px_init(t_pipex *pipex, int argc, char **argv, char **envp)
-{
-	if (argc < 5)
-		px_error(pipex, "args");
-	pipex->argc = argc;
-	pipex->argv = argv;
-	pipex->envp = envp;
-	pipex->cmd_abspath = 0;
-	pipex->cmd_args = 0;
-	pipex->path_tab = 0;
 	return (0);
 }
 

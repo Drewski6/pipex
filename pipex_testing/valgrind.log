@@ -1,357 +1,2300 @@
-==291139== Memcheck, a memory error detector
-==291139== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291139== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291139== Command: ./pipex file1 cat\ -e /usr/bin/wc\ -l file8
-==291139== 
-==291139== 
-==291139== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291139== 
-==291139== HEAP SUMMARY:
-==291139==     in use at exit: 0 bytes in 0 blocks
-==291139==   total heap usage: 59 allocs, 59 frees, 1,415 bytes allocated
-==291139== 
-==291139== All heap blocks were freed -- no leaks are possible
-==291139== 
-==291139== For lists of detected and suppressed errors, rerun with: -s
-==291139== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-10
-==291155== Memcheck, a memory error detector
-==291155== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291155== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291155== Command: ./pipex file1 cat /usr/bin/wc\ -l file8
-==291155== 
-==291155== 
-==291155== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291155== 
-==291155== HEAP SUMMARY:
-==291155==     in use at exit: 0 bytes in 0 blocks
-==291155==   total heap usage: 58 allocs, 58 frees, 1,404 bytes allocated
-==291155== 
-==291155== All heap blocks were freed -- no leaks are possible
-==291155== 
-==291155== For lists of detected and suppressed errors, rerun with: -s
-==291155== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-10
-==291160== Memcheck, a memory error detector
-==291160== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291160== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291160== Command: ./pipex file1 cat\ -e wc file8
-==291160== 
-==291160== 
-==291160== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291160== 
-==291160== HEAP SUMMARY:
-==291160==     in use at exit: 0 bytes in 0 blocks
-==291160==   total heap usage: 70 allocs, 70 frees, 1,750 bytes allocated
-==291160== 
-==291160== All heap blocks were freed -- no leaks are possible
-==291160== 
-==291160== For lists of detected and suppressed errors, rerun with: -s
-==291160== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-     10      10      69
-==291165== Memcheck, a memory error detector
-==291165== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291165== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291165== Command: ./pipex file1 cat wc file8
-==291165== 
-==291165== 
-==291165== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291165== 
-==291165== HEAP SUMMARY:
-==291165==     in use at exit: 0 bytes in 0 blocks
-==291165==   total heap usage: 69 allocs, 69 frees, 1,739 bytes allocated
-==291165== 
-==291165== All heap blocks were freed -- no leaks are possible
-==291165== 
-==291165== For lists of detected and suppressed errors, rerun with: -s
-==291165== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-     10      10      59
-==291170== Memcheck, a memory error detector
-==291170== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291170== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291170== Command: ./pipex file1 cat\ -e /usr/bin/wc\ -l file8
-==291170== 
-==291170== 
-==291170== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291170== 
-==291170== HEAP SUMMARY:
-==291170==     in use at exit: 0 bytes in 0 blocks
-==291170==   total heap usage: 59 allocs, 59 frees, 1,415 bytes allocated
-==291170== 
-==291170== All heap blocks were freed -- no leaks are possible
-==291170== 
-==291170== For lists of detected and suppressed errors, rerun with: -s
-==291170== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-10
-==291175== Memcheck, a memory error detector
-==291175== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291175== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291175== Command: ./pipex file1 catlkj\ -e /usr/bin/wc\ -l file8
-==291175== 
-access: No such file or directory
-==291175== 
-==291175== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291175== 
-==291175== HEAP SUMMARY:
-==291175==     in use at exit: 0 bytes in 0 blocks
-==291175==   total heap usage: 61 allocs, 61 frees, 1,507 bytes allocated
-==291175== 
-==291175== All heap blocks were freed -- no leaks are possible
-==291175== 
-==291175== For lists of detected and suppressed errors, rerun with: -s
-==291175== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291177== Memcheck, a memory error detector
-==291177== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291177== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291177== Command: ./pipex file1 cat\ -e /usr/bin/wclkj\ -l file8
-==291177== 
-access: No such file or directory
-==291177== 
-==291177== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291177== 
-==291177== HEAP SUMMARY:
-==291177==     in use at exit: 0 bytes in 0 blocks
-==291177==   total heap usage: 59 allocs, 59 frees, 1,421 bytes allocated
-==291177== 
-==291177== All heap blocks were freed -- no leaks are possible
-==291177== 
-==291177== For lists of detected and suppressed errors, rerun with: -s
-==291177== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291180== Memcheck, a memory error detector
-==291180== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291180== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291180== Command: ./pipex file1 catlkj\ -e /usr/bin/wclkj\ -l file8
-==291180== 
-access: No such file or directory
-==291180== 
-==291180== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291180== 
-==291180== HEAP SUMMARY:
-==291180==     in use at exit: 0 bytes in 0 blocks
-==291180==   total heap usage: 61 allocs, 61 frees, 1,507 bytes allocated
-==291180== 
-==291180== All heap blocks were freed -- no leaks are possible
-==291180== 
-==291180== For lists of detected and suppressed errors, rerun with: -s
-==291180== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291191== Memcheck, a memory error detector
-==291191== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291191== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291191== Command: ./pipex file1 cat /usr/bin/wc\ -l file8
-==291191== 
-==291191== 
-==291191== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291191== 
-==291191== HEAP SUMMARY:
-==291191==     in use at exit: 0 bytes in 0 blocks
-==291191==   total heap usage: 58 allocs, 58 frees, 1,404 bytes allocated
-==291191== 
-==291191== All heap blocks were freed -- no leaks are possible
-==291191== 
-==291191== For lists of detected and suppressed errors, rerun with: -s
-==291191== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-10
-==291196== Memcheck, a memory error detector
-==291196== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291196== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291196== Command: ./pipex file1 catlkj /usr/bin/wc\ -l file8
-==291196== 
-access: No such file or directory
-==291196== 
-==291196== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291196== 
-==291196== HEAP SUMMARY:
-==291196==     in use at exit: 0 bytes in 0 blocks
-==291196==   total heap usage: 60 allocs, 60 frees, 1,496 bytes allocated
-==291196== 
-==291196== All heap blocks were freed -- no leaks are possible
-==291196== 
-==291196== For lists of detected and suppressed errors, rerun with: -s
-==291196== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291198== Memcheck, a memory error detector
-==291198== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291198== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291198== Command: ./pipex file1 cat /usr/bin/wclkj\ -l file8
-==291198== 
-access: No such file or directory
-==291198== 
-==291198== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291198== 
-==291198== HEAP SUMMARY:
-==291198==     in use at exit: 0 bytes in 0 blocks
-==291198==   total heap usage: 58 allocs, 58 frees, 1,410 bytes allocated
-==291198== 
-==291198== All heap blocks were freed -- no leaks are possible
-==291198== 
-==291198== For lists of detected and suppressed errors, rerun with: -s
-==291198== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291201== Memcheck, a memory error detector
-==291201== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291201== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291201== Command: ./pipex file1 catlkj /usr/bin/wclkj\ -l file8
-==291201== 
-access: No such file or directory
-==291201== 
-==291201== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291201== 
-==291201== HEAP SUMMARY:
-==291201==     in use at exit: 0 bytes in 0 blocks
-==291201==   total heap usage: 60 allocs, 60 frees, 1,496 bytes allocated
-==291201== 
-==291201== All heap blocks were freed -- no leaks are possible
-==291201== 
-==291201== For lists of detected and suppressed errors, rerun with: -s
-==291201== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291203== Memcheck, a memory error detector
-==291203== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291203== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291203== Command: ./pipex file1 cat\ -e wc file8
-==291203== 
-==291203== 
-==291203== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291203== 
-==291203== HEAP SUMMARY:
-==291203==     in use at exit: 0 bytes in 0 blocks
-==291203==   total heap usage: 70 allocs, 70 frees, 1,750 bytes allocated
-==291203== 
-==291203== All heap blocks were freed -- no leaks are possible
-==291203== 
-==291203== For lists of detected and suppressed errors, rerun with: -s
-==291203== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-     10      10      69
-==291208== Memcheck, a memory error detector
-==291208== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291208== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291208== Command: ./pipex file1 catlkj\ -e wc file8
-==291208== 
-access: No such file or directory
-==291208== 
-==291208== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291208== 
-==291208== HEAP SUMMARY:
-==291208==     in use at exit: 0 bytes in 0 blocks
-==291208==   total heap usage: 61 allocs, 61 frees, 1,507 bytes allocated
-==291208== 
-==291208== All heap blocks were freed -- no leaks are possible
-==291208== 
-==291208== For lists of detected and suppressed errors, rerun with: -s
-==291208== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291210== Memcheck, a memory error detector
-==291210== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291210== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291210== Command: ./pipex file1 cat\ -e wclkj file8
-==291210== 
-access: No such file or directory
-==291210== 
-==291210== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291210== 
-==291210== HEAP SUMMARY:
-==291210==     in use at exit: 0 bytes in 0 blocks
-==291210==   total heap usage: 76 allocs, 76 frees, 1,887 bytes allocated
-==291210== 
-==291210== All heap blocks were freed -- no leaks are possible
-==291210== 
-==291210== For lists of detected and suppressed errors, rerun with: -s
-==291210== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291213== Memcheck, a memory error detector
-==291213== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291213== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291213== Command: ./pipex file1 catlkj\ -e wclkj file8
-==291213== 
-access: No such file or directory
-==291213== 
-==291213== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291213== 
-==291213== HEAP SUMMARY:
-==291213==     in use at exit: 0 bytes in 0 blocks
-==291213==   total heap usage: 61 allocs, 61 frees, 1,507 bytes allocated
-==291213== 
-==291213== All heap blocks were freed -- no leaks are possible
-==291213== 
-==291213== For lists of detected and suppressed errors, rerun with: -s
-==291213== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291215== Memcheck, a memory error detector
-==291215== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291215== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291215== Command: ./pipex file1 cat wc file8
-==291215== 
-==291215== 
-==291215== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291215== 
-==291215== HEAP SUMMARY:
-==291215==     in use at exit: 0 bytes in 0 blocks
-==291215==   total heap usage: 69 allocs, 69 frees, 1,739 bytes allocated
-==291215== 
-==291215== All heap blocks were freed -- no leaks are possible
-==291215== 
-==291215== For lists of detected and suppressed errors, rerun with: -s
-==291215== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-     10      10      59
-==291220== Memcheck, a memory error detector
-==291220== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291220== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291220== Command: ./pipex file1 catlkj wc file8
-==291220== 
-access: No such file or directory
-==291220== 
-==291220== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291220== 
-==291220== HEAP SUMMARY:
-==291220==     in use at exit: 0 bytes in 0 blocks
-==291220==   total heap usage: 60 allocs, 60 frees, 1,496 bytes allocated
-==291220== 
-==291220== All heap blocks were freed -- no leaks are possible
-==291220== 
-==291220== For lists of detected and suppressed errors, rerun with: -s
-==291220== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291222== Memcheck, a memory error detector
-==291222== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291222== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291222== Command: ./pipex file1 cat wclkj file8
-==291222== 
-access: No such file or directory
-==291222== 
-==291222== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291222== 
-==291222== HEAP SUMMARY:
-==291222==     in use at exit: 0 bytes in 0 blocks
-==291222==   total heap usage: 75 allocs, 75 frees, 1,876 bytes allocated
-==291222== 
-==291222== All heap blocks were freed -- no leaks are possible
-==291222== 
-==291222== For lists of detected and suppressed errors, rerun with: -s
-==291222== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291227== Memcheck, a memory error detector
-==291227== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291227== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291227== Command: ./pipex file1 catlkj wclkj file8
-==291227== 
-access: No such file or directory
-==291227== 
-==291227== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291227== 
-==291227== HEAP SUMMARY:
-==291227==     in use at exit: 0 bytes in 0 blocks
-==291227==   total heap usage: 60 allocs, 60 frees, 1,496 bytes allocated
-==291227== 
-==291227== All heap blocks were freed -- no leaks are possible
-==291227== 
-==291227== For lists of detected and suppressed errors, rerun with: -s
-==291227== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==291230== Memcheck, a memory error detector
-==291230== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==291230== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==291230== Command: ./pipex file1lksjdlkfj cat\ -e /usr/bin/wc\ -l file8
-==291230== 
-access: No such file or directory
-==291230== 
-==291230== FILE DESCRIPTORS: 0 open (0 std) at exit.
-==291230== 
-==291230== HEAP SUMMARY:
-==291230==     in use at exit: 0 bytes in 0 blocks
-==291230==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
-==291230== 
-==291230== All heap blocks were freed -- no leaks are possible
-==291230== 
-==291230== For lists of detected and suppressed errors, rerun with: -s
-==291230== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466008== Memcheck, a memory error detector
+==466008== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466008== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466008== Command: ./pipex
+==466008== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466008== 
+==466008== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466008== 
+==466008== HEAP SUMMARY:
+==466008==     in use at exit: 0 bytes in 0 blocks
+==466008==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466008== 
+==466008== All heap blocks were freed -- no leaks are possible
+==466008== 
+==466008== For lists of detected and suppressed errors, rerun with: -s
+==466008== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466010== Memcheck, a memory error detector
+==466010== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466010== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466010== Command: ./pipex file1
+==466010== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466010== 
+==466010== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466010== 
+==466010== HEAP SUMMARY:
+==466010==     in use at exit: 0 bytes in 0 blocks
+==466010==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466010== 
+==466010== All heap blocks were freed -- no leaks are possible
+==466010== 
+==466010== For lists of detected and suppressed errors, rerun with: -s
+==466010== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466012== Memcheck, a memory error detector
+==466012== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466012== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466012== Command: ./pipex file1 cat
+==466012== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466012== 
+==466012== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466012== 
+==466012== HEAP SUMMARY:
+==466012==     in use at exit: 0 bytes in 0 blocks
+==466012==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466012== 
+==466012== All heap blocks were freed -- no leaks are possible
+==466012== 
+==466012== For lists of detected and suppressed errors, rerun with: -s
+==466012== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466014== Memcheck, a memory error detector
+==466014== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466014== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466014== Command: ./pipex file1 cat wc
+==466014== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466014== 
+==466014== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466014== 
+==466014== HEAP SUMMARY:
+==466014==     in use at exit: 0 bytes in 0 blocks
+==466014==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466014== 
+==466014== All heap blocks were freed -- no leaks are possible
+==466014== 
+==466014== For lists of detected and suppressed errors, rerun with: -s
+==466014== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466016== Memcheck, a memory error detector
+==466016== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466016== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466016== Command: ./pipex
+==466016== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466016== 
+==466016== HEAP SUMMARY:
+==466016==     in use at exit: 0 bytes in 0 blocks
+==466016==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466016== 
+==466016== All heap blocks were freed -- no leaks are possible
+==466016== 
+==466016== For lists of detected and suppressed errors, rerun with: -s
+==466016== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466018== Memcheck, a memory error detector
+==466018== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466018== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466018== Command: ./pipex file1
+==466018== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466018== 
+==466018== HEAP SUMMARY:
+==466018==     in use at exit: 0 bytes in 0 blocks
+==466018==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466018== 
+==466018== All heap blocks were freed -- no leaks are possible
+==466018== 
+==466018== For lists of detected and suppressed errors, rerun with: -s
+==466018== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466020== Memcheck, a memory error detector
+==466020== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466020== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466020== Command: ./pipex file1 cat
+==466020== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466020== 
+==466020== HEAP SUMMARY:
+==466020==     in use at exit: 0 bytes in 0 blocks
+==466020==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466020== 
+==466020== All heap blocks were freed -- no leaks are possible
+==466020== 
+==466020== For lists of detected and suppressed errors, rerun with: -s
+==466020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466022== Memcheck, a memory error detector
+==466022== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466022== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466022== Command: ./pipex file1 cat wc
+==466022== 
+Usage: pipex [infile] ['command'] ... [outfile]
+==466022== 
+==466022== HEAP SUMMARY:
+==466022==     in use at exit: 0 bytes in 0 blocks
+==466022==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466022== 
+==466022== All heap blocks were freed -- no leaks are possible
+==466022== 
+==466022== For lists of detected and suppressed errors, rerun with: -s
+==466022== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466024== Memcheck, a memory error detector
+==466024== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466024== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466024== Command: ./pipex file1 cat\ -e /usr/bin/wc\ -l file8
+==466024== 
+==466024== 
+==466024== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466024== 
+==466024== HEAP SUMMARY:
+==466024==     in use at exit: 0 bytes in 0 blocks
+==466024==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466024== 
+==466024== All heap blocks were freed -- no leaks are possible
+==466024== 
+==466024== For lists of detected and suppressed errors, rerun with: -s
+==466024== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466029== Memcheck, a memory error detector
+==466029== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466029== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466029== Command: ./pipex file1 cat /usr/bin/wc\ -l file8
+==466029== 
+==466029== 
+==466029== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466029== 
+==466029== HEAP SUMMARY:
+==466029==     in use at exit: 0 bytes in 0 blocks
+==466029==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466029== 
+==466029== All heap blocks were freed -- no leaks are possible
+==466029== 
+==466029== For lists of detected and suppressed errors, rerun with: -s
+==466029== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466034== Memcheck, a memory error detector
+==466034== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466034== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466034== Command: ./pipex file1 cat\ -e wc file8
+==466034== 
+==466034== 
+==466034== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466034== 
+==466034== HEAP SUMMARY:
+==466034==     in use at exit: 0 bytes in 0 blocks
+==466034==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466034== 
+==466034== All heap blocks were freed -- no leaks are possible
+==466034== 
+==466034== For lists of detected and suppressed errors, rerun with: -s
+==466034== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       4      24
+
+==466039== Memcheck, a memory error detector
+==466039== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466039== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466039== Command: ./pipex file1 cat wc file8
+==466039== 
+==466039== 
+==466039== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466039== 
+==466039== HEAP SUMMARY:
+==466039==     in use at exit: 0 bytes in 0 blocks
+==466039==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466039== 
+==466039== All heap blocks were freed -- no leaks are possible
+==466039== 
+==466039== For lists of detected and suppressed errors, rerun with: -s
+==466039== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       3      20
+
+==466053== Memcheck, a memory error detector
+==466053== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466053== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466053== Command: ./pipex file1 cat\ -e /usr/bin/wc\ -l file8
+==466053== 
+==466053== 
+==466053== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466053== 
+==466053== HEAP SUMMARY:
+==466053==     in use at exit: 0 bytes in 0 blocks
+==466053==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466053== 
+==466053== All heap blocks were freed -- no leaks are possible
+==466053== 
+==466053== For lists of detected and suppressed errors, rerun with: -s
+==466053== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466058== Memcheck, a memory error detector
+==466058== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466058== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466058== Command: ./pipex file1 catlkj\ -e /usr/bin/wc\ -l file8
+==466058== 
+catlkj: No such file or directory
+==466059== 
+==466059== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466059== 
+==466059== HEAP SUMMARY:
+==466059==     in use at exit: 0 bytes in 0 blocks
+==466059==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466059== 
+==466059== All heap blocks were freed -- no leaks are possible
+==466059== 
+==466059== For lists of detected and suppressed errors, rerun with: -s
+==466059== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466058== 
+==466058== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466058== 
+==466058== HEAP SUMMARY:
+==466058==     in use at exit: 0 bytes in 0 blocks
+==466058==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466058== 
+==466058== All heap blocks were freed -- no leaks are possible
+==466058== 
+==466058== For lists of detected and suppressed errors, rerun with: -s
+==466058== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466063== Memcheck, a memory error detector
+==466063== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466063== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466063== Command: ./pipex file1 cat\ -e /usr/bin/wclkj\ -l file8
+==466063== 
+/usr/bin/wclkj: No such file or directory
+==466065== 
+==466065== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466065== 
+==466065== HEAP SUMMARY:
+==466065==     in use at exit: 0 bytes in 0 blocks
+==466065==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466065== 
+==466065== All heap blocks were freed -- no leaks are possible
+==466065== 
+==466065== For lists of detected and suppressed errors, rerun with: -s
+==466065== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466063== 
+==466063== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466063== 
+==466063== HEAP SUMMARY:
+==466063==     in use at exit: 0 bytes in 0 blocks
+==466063==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466063== 
+==466063== All heap blocks were freed -- no leaks are possible
+==466063== 
+==466063== For lists of detected and suppressed errors, rerun with: -s
+==466063== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466068== Memcheck, a memory error detector
+==466068== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466068== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466068== Command: ./pipex file1 catlkj\ -e /usr/bin/wclkj\ -l file8
+==466068== 
+catlkj: No such file or directory
+==466069== 
+==466069== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466069== 
+==466069== HEAP SUMMARY:
+==466069==     in use at exit: 0 bytes in 0 blocks
+==466069==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466069== 
+==466069== All heap blocks were freed -- no leaks are possible
+==466069== 
+==466069== For lists of detected and suppressed errors, rerun with: -s
+==466069== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466070== 
+==466070== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466070== 
+==466070== HEAP SUMMARY:
+==466070==     in use at exit: 0 bytes in 0 blocks
+==466070==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466070== 
+==466070== All heap blocks were freed -- no leaks are possible
+==466070== 
+==466070== For lists of detected and suppressed errors, rerun with: -s
+==466070== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466068== 
+==466068== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466068== 
+==466068== HEAP SUMMARY:
+==466068==     in use at exit: 0 bytes in 0 blocks
+==466068==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466068== 
+==466068== All heap blocks were freed -- no leaks are possible
+==466068== 
+==466068== For lists of detected and suppressed errors, rerun with: -s
+==466068== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466073== Memcheck, a memory error detector
+==466073== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466073== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466073== Command: ./pipex file1 cat /usr/bin/wc\ -l file8
+==466073== 
+==466073== 
+==466073== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466073== 
+==466073== HEAP SUMMARY:
+==466073==     in use at exit: 0 bytes in 0 blocks
+==466073==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466073== 
+==466073== All heap blocks were freed -- no leaks are possible
+==466073== 
+==466073== For lists of detected and suppressed errors, rerun with: -s
+==466073== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466078== Memcheck, a memory error detector
+==466078== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466078== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466078== Command: ./pipex file1 catlkj /usr/bin/wc\ -l file8
+==466078== 
+catlkj: No such file or directory
+==466079== 
+==466079== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466079== 
+==466079== HEAP SUMMARY:
+==466079==     in use at exit: 0 bytes in 0 blocks
+==466079==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466079== 
+==466079== All heap blocks were freed -- no leaks are possible
+==466079== 
+==466079== For lists of detected and suppressed errors, rerun with: -s
+==466079== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466078== 
+==466078== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466078== 
+==466078== HEAP SUMMARY:
+==466078==     in use at exit: 0 bytes in 0 blocks
+==466078==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466078== 
+==466078== All heap blocks were freed -- no leaks are possible
+==466078== 
+==466078== For lists of detected and suppressed errors, rerun with: -s
+==466078== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466083== Memcheck, a memory error detector
+==466083== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466083== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466083== Command: ./pipex file1 cat /usr/bin/wclkj\ -l file8
+==466083== 
+/usr/bin/wclkj: No such file or directory
+==466085== 
+==466085== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466085== 
+==466085== HEAP SUMMARY:
+==466085==     in use at exit: 0 bytes in 0 blocks
+==466085==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466085== 
+==466085== All heap blocks were freed -- no leaks are possible
+==466085== 
+==466085== For lists of detected and suppressed errors, rerun with: -s
+==466085== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466083== 
+==466083== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466083== 
+==466083== HEAP SUMMARY:
+==466083==     in use at exit: 0 bytes in 0 blocks
+==466083==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466083== 
+==466083== All heap blocks were freed -- no leaks are possible
+==466083== 
+==466083== For lists of detected and suppressed errors, rerun with: -s
+==466083== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466088== Memcheck, a memory error detector
+==466088== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466088== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466088== Command: ./pipex file1 catlkj /usr/bin/wclkj\ -l file8
+==466088== 
+catlkj: No such file or directory
+==466089== 
+==466089== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466089== 
+==466089== HEAP SUMMARY:
+==466089==     in use at exit: 0 bytes in 0 blocks
+==466089==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466089== 
+==466089== All heap blocks were freed -- no leaks are possible
+==466089== 
+==466089== For lists of detected and suppressed errors, rerun with: -s
+==466089== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466090== 
+==466090== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466090== 
+==466090== HEAP SUMMARY:
+==466090==     in use at exit: 0 bytes in 0 blocks
+==466090==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466090== 
+==466090== All heap blocks were freed -- no leaks are possible
+==466090== 
+==466090== For lists of detected and suppressed errors, rerun with: -s
+==466090== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466088== 
+==466088== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466088== 
+==466088== HEAP SUMMARY:
+==466088==     in use at exit: 0 bytes in 0 blocks
+==466088==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466088== 
+==466088== All heap blocks were freed -- no leaks are possible
+==466088== 
+==466088== For lists of detected and suppressed errors, rerun with: -s
+==466088== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466093== Memcheck, a memory error detector
+==466093== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466093== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466093== Command: ./pipex file1 cat\ -e wc file8
+==466093== 
+==466093== 
+==466093== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466093== 
+==466093== HEAP SUMMARY:
+==466093==     in use at exit: 0 bytes in 0 blocks
+==466093==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466093== 
+==466093== All heap blocks were freed -- no leaks are possible
+==466093== 
+==466093== For lists of detected and suppressed errors, rerun with: -s
+==466093== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       4      24
+
+==466098== Memcheck, a memory error detector
+==466098== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466098== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466098== Command: ./pipex file1 catlkj\ -e wc file8
+==466098== 
+catlkj: No such file or directory
+==466099== 
+==466099== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466099== 
+==466099== HEAP SUMMARY:
+==466099==     in use at exit: 0 bytes in 0 blocks
+==466099==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466099== 
+==466099== All heap blocks were freed -- no leaks are possible
+==466099== 
+==466099== For lists of detected and suppressed errors, rerun with: -s
+==466099== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466098== 
+==466098== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466098== 
+==466098== HEAP SUMMARY:
+==466098==     in use at exit: 0 bytes in 0 blocks
+==466098==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466098== 
+==466098== All heap blocks were freed -- no leaks are possible
+==466098== 
+==466098== For lists of detected and suppressed errors, rerun with: -s
+==466098== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466103== Memcheck, a memory error detector
+==466103== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466103== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466103== Command: ./pipex file1 cat\ -e wclkj file8
+==466103== 
+wclkj: No such file or directory
+==466105== 
+==466105== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466105== 
+==466105== HEAP SUMMARY:
+==466105==     in use at exit: 0 bytes in 0 blocks
+==466105==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466105== 
+==466105== All heap blocks were freed -- no leaks are possible
+==466105== 
+==466105== For lists of detected and suppressed errors, rerun with: -s
+==466105== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466103== 
+==466103== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466103== 
+==466103== HEAP SUMMARY:
+==466103==     in use at exit: 0 bytes in 0 blocks
+==466103==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466103== 
+==466103== All heap blocks were freed -- no leaks are possible
+==466103== 
+==466103== For lists of detected and suppressed errors, rerun with: -s
+==466103== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466108== Memcheck, a memory error detector
+==466108== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466108== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466108== Command: ./pipex file1 catlkj\ -e wclkj file8
+==466108== 
+catlkj: No such file or directory
+==466109== 
+==466109== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466109== 
+==466109== HEAP SUMMARY:
+==466109==     in use at exit: 0 bytes in 0 blocks
+==466109==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466109== 
+==466109== All heap blocks were freed -- no leaks are possible
+==466109== 
+==466109== For lists of detected and suppressed errors, rerun with: -s
+==466109== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466110== 
+==466110== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466110== 
+==466110== HEAP SUMMARY:
+==466110==     in use at exit: 0 bytes in 0 blocks
+==466110==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466110== 
+==466110== All heap blocks were freed -- no leaks are possible
+==466110== 
+==466110== For lists of detected and suppressed errors, rerun with: -s
+==466110== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466108== 
+==466108== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466108== 
+==466108== HEAP SUMMARY:
+==466108==     in use at exit: 0 bytes in 0 blocks
+==466108==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466108== 
+==466108== All heap blocks were freed -- no leaks are possible
+==466108== 
+==466108== For lists of detected and suppressed errors, rerun with: -s
+==466108== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466113== Memcheck, a memory error detector
+==466113== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466113== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466113== Command: ./pipex file1 cat wc file8
+==466113== 
+==466113== 
+==466113== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466113== 
+==466113== HEAP SUMMARY:
+==466113==     in use at exit: 0 bytes in 0 blocks
+==466113==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466113== 
+==466113== All heap blocks were freed -- no leaks are possible
+==466113== 
+==466113== For lists of detected and suppressed errors, rerun with: -s
+==466113== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       3      20
+
+==466127== Memcheck, a memory error detector
+==466127== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466127== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466127== Command: ./pipex file1 catlkj wc file8
+==466127== 
+catlkj: No such file or directory
+==466128== 
+==466128== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466128== 
+==466128== HEAP SUMMARY:
+==466128==     in use at exit: 0 bytes in 0 blocks
+==466128==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466128== 
+==466128== All heap blocks were freed -- no leaks are possible
+==466128== 
+==466128== For lists of detected and suppressed errors, rerun with: -s
+==466128== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466127== 
+==466127== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466127== 
+==466127== HEAP SUMMARY:
+==466127==     in use at exit: 0 bytes in 0 blocks
+==466127==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466127== 
+==466127== All heap blocks were freed -- no leaks are possible
+==466127== 
+==466127== For lists of detected and suppressed errors, rerun with: -s
+==466127== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466132== Memcheck, a memory error detector
+==466132== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466132== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466132== Command: ./pipex file1 cat wclkj file8
+==466132== 
+wclkj: No such file or directory
+==466134== 
+==466134== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466134== 
+==466134== HEAP SUMMARY:
+==466134==     in use at exit: 0 bytes in 0 blocks
+==466134==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466134== 
+==466134== All heap blocks were freed -- no leaks are possible
+==466134== 
+==466134== For lists of detected and suppressed errors, rerun with: -s
+==466134== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466132== 
+==466132== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466132== 
+==466132== HEAP SUMMARY:
+==466132==     in use at exit: 0 bytes in 0 blocks
+==466132==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466132== 
+==466132== All heap blocks were freed -- no leaks are possible
+==466132== 
+==466132== For lists of detected and suppressed errors, rerun with: -s
+==466132== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466137== Memcheck, a memory error detector
+==466137== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466137== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466137== Command: ./pipex file1 catlkj wclkj file8
+==466137== 
+catlkj: No such file or directory
+==466138== 
+==466138== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466138== 
+==466138== HEAP SUMMARY:
+==466138==     in use at exit: 0 bytes in 0 blocks
+==466138==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466138== 
+==466138== All heap blocks were freed -- no leaks are possible
+==466138== 
+==466138== For lists of detected and suppressed errors, rerun with: -s
+==466138== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466139== 
+==466139== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466139== 
+==466139== HEAP SUMMARY:
+==466139==     in use at exit: 0 bytes in 0 blocks
+==466139==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466139== 
+==466139== All heap blocks were freed -- no leaks are possible
+==466139== 
+==466139== For lists of detected and suppressed errors, rerun with: -s
+==466139== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466137== 
+==466137== FILE DESCRIPTORS: 0 open (0 std) at exit.
+==466137== 
+==466137== HEAP SUMMARY:
+==466137==     in use at exit: 0 bytes in 0 blocks
+==466137==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466137== 
+==466137== All heap blocks were freed -- no leaks are possible
+==466137== 
+==466137== For lists of detected and suppressed errors, rerun with: -s
+==466137== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466142== Memcheck, a memory error detector
+==466142== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466142== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466142== Command: ./pipex file1 cat\ -e /usr/bin/wc\ -l file8
+==466142== 
+==466143== Memcheck, a memory error detector
+==466143== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466143== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466143== Command: /usr/bin/cat -e
+==466143== 
+==466143== 
+==466143== HEAP SUMMARY:
+==466143==     in use at exit: 0 bytes in 0 blocks
+==466143==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466143== 
+==466143== All heap blocks were freed -- no leaks are possible
+==466143== 
+==466143== For lists of detected and suppressed errors, rerun with: -s
+==466143== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466144== Memcheck, a memory error detector
+==466144== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466144== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466144== Command: /usr/bin/wc -l
+==466144== 
+==466144== 
+==466144== HEAP SUMMARY:
+==466144==     in use at exit: 0 bytes in 0 blocks
+==466144==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466144== 
+==466144== All heap blocks were freed -- no leaks are possible
+==466144== 
+==466144== For lists of detected and suppressed errors, rerun with: -s
+==466144== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466142== 
+==466142== HEAP SUMMARY:
+==466142==     in use at exit: 0 bytes in 0 blocks
+==466142==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466142== 
+==466142== All heap blocks were freed -- no leaks are possible
+==466142== 
+==466142== For lists of detected and suppressed errors, rerun with: -s
+==466142== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466147== Memcheck, a memory error detector
+==466147== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466147== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466147== Command: ./pipex file1 cat /usr/bin/wc\ -l file8
+==466147== 
+==466148== Memcheck, a memory error detector
+==466148== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466148== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466148== Command: /usr/bin/cat
+==466148== 
+==466148== 
+==466148== HEAP SUMMARY:
+==466148==     in use at exit: 0 bytes in 0 blocks
+==466148==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466148== 
+==466148== All heap blocks were freed -- no leaks are possible
+==466148== 
+==466148== For lists of detected and suppressed errors, rerun with: -s
+==466148== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466149== Memcheck, a memory error detector
+==466149== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466149== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466149== Command: /usr/bin/wc -l
+==466149== 
+==466149== 
+==466149== HEAP SUMMARY:
+==466149==     in use at exit: 0 bytes in 0 blocks
+==466149==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466149== 
+==466149== All heap blocks were freed -- no leaks are possible
+==466149== 
+==466149== For lists of detected and suppressed errors, rerun with: -s
+==466149== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466147== 
+==466147== HEAP SUMMARY:
+==466147==     in use at exit: 0 bytes in 0 blocks
+==466147==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466147== 
+==466147== All heap blocks were freed -- no leaks are possible
+==466147== 
+==466147== For lists of detected and suppressed errors, rerun with: -s
+==466147== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466153== Memcheck, a memory error detector
+==466153== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466153== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466153== Command: ./pipex file1 cat\ -e wc file8
+==466153== 
+==466154== Memcheck, a memory error detector
+==466154== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466154== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466154== Command: /usr/bin/cat -e
+==466154== 
+==466154== 
+==466154== HEAP SUMMARY:
+==466154==     in use at exit: 0 bytes in 0 blocks
+==466154==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466154== 
+==466154== All heap blocks were freed -- no leaks are possible
+==466154== 
+==466154== For lists of detected and suppressed errors, rerun with: -s
+==466154== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466155== Memcheck, a memory error detector
+==466155== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466155== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466155== Command: /usr/bin/wc
+==466155== 
+==466155== 
+==466155== HEAP SUMMARY:
+==466155==     in use at exit: 0 bytes in 0 blocks
+==466155==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466155== 
+==466155== All heap blocks were freed -- no leaks are possible
+==466155== 
+==466155== For lists of detected and suppressed errors, rerun with: -s
+==466155== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466153== 
+==466153== HEAP SUMMARY:
+==466153==     in use at exit: 0 bytes in 0 blocks
+==466153==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466153== 
+==466153== All heap blocks were freed -- no leaks are possible
+==466153== 
+==466153== For lists of detected and suppressed errors, rerun with: -s
+==466153== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       4      24
+
+==466158== Memcheck, a memory error detector
+==466158== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466158== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466158== Command: ./pipex file1 cat wc file8
+==466158== 
+==466159== Memcheck, a memory error detector
+==466159== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466159== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466159== Command: /usr/bin/cat
+==466159== 
+==466159== 
+==466159== HEAP SUMMARY:
+==466159==     in use at exit: 0 bytes in 0 blocks
+==466159==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466159== 
+==466159== All heap blocks were freed -- no leaks are possible
+==466159== 
+==466159== For lists of detected and suppressed errors, rerun with: -s
+==466159== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466169== Memcheck, a memory error detector
+==466169== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466169== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466169== Command: /usr/bin/wc
+==466169== 
+==466169== 
+==466169== HEAP SUMMARY:
+==466169==     in use at exit: 0 bytes in 0 blocks
+==466169==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466169== 
+==466169== All heap blocks were freed -- no leaks are possible
+==466169== 
+==466169== For lists of detected and suppressed errors, rerun with: -s
+==466169== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466158== 
+==466158== HEAP SUMMARY:
+==466158==     in use at exit: 0 bytes in 0 blocks
+==466158==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466158== 
+==466158== All heap blocks were freed -- no leaks are possible
+==466158== 
+==466158== For lists of detected and suppressed errors, rerun with: -s
+==466158== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       3      20
+
+==466173== Memcheck, a memory error detector
+==466173== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466173== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466173== Command: ./pipex file1 cat\ -e /usr/bin/wc\ -l file8
+==466173== 
+==466174== Memcheck, a memory error detector
+==466174== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466174== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466174== Command: /usr/bin/cat -e
+==466174== 
+==466174== 
+==466174== HEAP SUMMARY:
+==466174==     in use at exit: 0 bytes in 0 blocks
+==466174==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466174== 
+==466174== All heap blocks were freed -- no leaks are possible
+==466174== 
+==466174== For lists of detected and suppressed errors, rerun with: -s
+==466174== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466175== Memcheck, a memory error detector
+==466175== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466175== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466175== Command: /usr/bin/wc -l
+==466175== 
+==466175== 
+==466175== HEAP SUMMARY:
+==466175==     in use at exit: 0 bytes in 0 blocks
+==466175==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466175== 
+==466175== All heap blocks were freed -- no leaks are possible
+==466175== 
+==466175== For lists of detected and suppressed errors, rerun with: -s
+==466175== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466173== 
+==466173== HEAP SUMMARY:
+==466173==     in use at exit: 0 bytes in 0 blocks
+==466173==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466173== 
+==466173== All heap blocks were freed -- no leaks are possible
+==466173== 
+==466173== For lists of detected and suppressed errors, rerun with: -s
+==466173== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466178== Memcheck, a memory error detector
+==466178== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466178== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466178== Command: ./pipex file1 catlkj\ -e /usr/bin/wc\ -l file8
+==466178== 
+catlkj: No such file or directory
+==466179== 
+==466179== HEAP SUMMARY:
+==466179==     in use at exit: 0 bytes in 0 blocks
+==466179==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466179== 
+==466179== All heap blocks were freed -- no leaks are possible
+==466179== 
+==466179== For lists of detected and suppressed errors, rerun with: -s
+==466179== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466180== Memcheck, a memory error detector
+==466180== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466180== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466180== Command: /usr/bin/wc -l
+==466180== 
+==466180== 
+==466180== HEAP SUMMARY:
+==466180==     in use at exit: 0 bytes in 0 blocks
+==466180==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466180== 
+==466180== All heap blocks were freed -- no leaks are possible
+==466180== 
+==466180== For lists of detected and suppressed errors, rerun with: -s
+==466180== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466178== 
+==466178== HEAP SUMMARY:
+==466178==     in use at exit: 0 bytes in 0 blocks
+==466178==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466178== 
+==466178== All heap blocks were freed -- no leaks are possible
+==466178== 
+==466178== For lists of detected and suppressed errors, rerun with: -s
+==466178== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466183== Memcheck, a memory error detector
+==466183== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466183== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466183== Command: ./pipex file1 cat\ -e /usr/bin/wclkj\ -l file8
+==466183== 
+==466184== Memcheck, a memory error detector
+==466184== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466184== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466184== Command: /usr/bin/cat -e
+==466184== 
+==466184== 
+==466184== HEAP SUMMARY:
+==466184==     in use at exit: 0 bytes in 0 blocks
+==466184==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466184== 
+==466184== All heap blocks were freed -- no leaks are possible
+==466184== 
+==466184== For lists of detected and suppressed errors, rerun with: -s
+==466184== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466185== 
+==466185== HEAP SUMMARY:
+==466185==     in use at exit: 0 bytes in 0 blocks
+==466185==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466185== 
+==466185== All heap blocks were freed -- no leaks are possible
+==466185== 
+==466185== For lists of detected and suppressed errors, rerun with: -s
+==466185== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466183== 
+==466183== HEAP SUMMARY:
+==466183==     in use at exit: 0 bytes in 0 blocks
+==466183==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466183== 
+==466183== All heap blocks were freed -- no leaks are possible
+==466183== 
+==466183== For lists of detected and suppressed errors, rerun with: -s
+==466183== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466188== Memcheck, a memory error detector
+==466188== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466188== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466188== Command: ./pipex file1 catlkj\ -e /usr/bin/wclkj\ -l file8
+==466188== 
+catlkj: No such file or directory
+==466189== 
+==466189== HEAP SUMMARY:
+==466189==     in use at exit: 0 bytes in 0 blocks
+==466189==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466189== 
+==466189== All heap blocks were freed -- no leaks are possible
+==466189== 
+==466189== For lists of detected and suppressed errors, rerun with: -s
+==466189== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466190== 
+==466190== HEAP SUMMARY:
+==466190==     in use at exit: 0 bytes in 0 blocks
+==466190==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466190== 
+==466190== All heap blocks were freed -- no leaks are possible
+==466190== 
+==466190== For lists of detected and suppressed errors, rerun with: -s
+==466190== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466188== 
+==466188== HEAP SUMMARY:
+==466188==     in use at exit: 0 bytes in 0 blocks
+==466188==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466188== 
+==466188== All heap blocks were freed -- no leaks are possible
+==466188== 
+==466188== For lists of detected and suppressed errors, rerun with: -s
+==466188== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466193== Memcheck, a memory error detector
+==466193== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466193== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466193== Command: ./pipex file1 cat /usr/bin/wc\ -l file8
+==466193== 
+==466194== Memcheck, a memory error detector
+==466194== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466194== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466194== Command: /usr/bin/cat
+==466194== 
+==466194== 
+==466194== HEAP SUMMARY:
+==466194==     in use at exit: 0 bytes in 0 blocks
+==466194==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466194== 
+==466194== All heap blocks were freed -- no leaks are possible
+==466194== 
+==466194== For lists of detected and suppressed errors, rerun with: -s
+==466194== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466195== Memcheck, a memory error detector
+==466195== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466195== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466195== Command: /usr/bin/wc -l
+==466195== 
+==466195== 
+==466195== HEAP SUMMARY:
+==466195==     in use at exit: 0 bytes in 0 blocks
+==466195==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466195== 
+==466195== All heap blocks were freed -- no leaks are possible
+==466195== 
+==466195== For lists of detected and suppressed errors, rerun with: -s
+==466195== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466193== 
+==466193== HEAP SUMMARY:
+==466193==     in use at exit: 0 bytes in 0 blocks
+==466193==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466193== 
+==466193== All heap blocks were freed -- no leaks are possible
+==466193== 
+==466193== For lists of detected and suppressed errors, rerun with: -s
+==466193== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+4
+
+==466198== Memcheck, a memory error detector
+==466198== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466198== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466198== Command: ./pipex file1 catlkj /usr/bin/wc\ -l file8
+==466198== 
+catlkj: No such file or directory
+==466208== 
+==466208== HEAP SUMMARY:
+==466208==     in use at exit: 0 bytes in 0 blocks
+==466208==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466208== 
+==466208== All heap blocks were freed -- no leaks are possible
+==466208== 
+==466208== For lists of detected and suppressed errors, rerun with: -s
+==466208== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466209== Memcheck, a memory error detector
+==466209== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466209== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466209== Command: /usr/bin/wc -l
+==466209== 
+==466209== 
+==466209== HEAP SUMMARY:
+==466209==     in use at exit: 0 bytes in 0 blocks
+==466209==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466209== 
+==466209== All heap blocks were freed -- no leaks are possible
+==466209== 
+==466209== For lists of detected and suppressed errors, rerun with: -s
+==466209== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466198== 
+==466198== HEAP SUMMARY:
+==466198==     in use at exit: 0 bytes in 0 blocks
+==466198==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466198== 
+==466198== All heap blocks were freed -- no leaks are possible
+==466198== 
+==466198== For lists of detected and suppressed errors, rerun with: -s
+==466198== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466212== Memcheck, a memory error detector
+==466212== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466212== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466212== Command: ./pipex file1 cat /usr/bin/wclkj\ -l file8
+==466212== 
+==466213== Memcheck, a memory error detector
+==466213== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466213== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466213== Command: /usr/bin/cat
+==466213== 
+==466213== 
+==466213== HEAP SUMMARY:
+==466213==     in use at exit: 0 bytes in 0 blocks
+==466213==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466213== 
+==466213== All heap blocks were freed -- no leaks are possible
+==466213== 
+==466213== For lists of detected and suppressed errors, rerun with: -s
+==466213== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466215== 
+==466215== HEAP SUMMARY:
+==466215==     in use at exit: 0 bytes in 0 blocks
+==466215==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466215== 
+==466215== All heap blocks were freed -- no leaks are possible
+==466215== 
+==466215== For lists of detected and suppressed errors, rerun with: -s
+==466215== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466212== 
+==466212== HEAP SUMMARY:
+==466212==     in use at exit: 0 bytes in 0 blocks
+==466212==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466212== 
+==466212== All heap blocks were freed -- no leaks are possible
+==466212== 
+==466212== For lists of detected and suppressed errors, rerun with: -s
+==466212== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466218== Memcheck, a memory error detector
+==466218== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466218== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466218== Command: ./pipex file1 catlkj /usr/bin/wclkj\ -l file8
+==466218== 
+catlkj: No such file or directory
+==466219== 
+==466219== HEAP SUMMARY:
+==466219==     in use at exit: 0 bytes in 0 blocks
+==466219==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466219== 
+==466219== All heap blocks were freed -- no leaks are possible
+==466219== 
+==466219== For lists of detected and suppressed errors, rerun with: -s
+==466219== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466220== 
+==466220== HEAP SUMMARY:
+==466220==     in use at exit: 0 bytes in 0 blocks
+==466220==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466220== 
+==466220== All heap blocks were freed -- no leaks are possible
+==466220== 
+==466220== For lists of detected and suppressed errors, rerun with: -s
+==466220== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466218== 
+==466218== HEAP SUMMARY:
+==466218==     in use at exit: 0 bytes in 0 blocks
+==466218==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466218== 
+==466218== All heap blocks were freed -- no leaks are possible
+==466218== 
+==466218== For lists of detected and suppressed errors, rerun with: -s
+==466218== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466223== Memcheck, a memory error detector
+==466223== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466223== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466223== Command: ./pipex file1 cat\ -e wc file8
+==466223== 
+==466224== Memcheck, a memory error detector
+==466224== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466224== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466224== Command: /usr/bin/cat -e
+==466224== 
+==466224== 
+==466224== HEAP SUMMARY:
+==466224==     in use at exit: 0 bytes in 0 blocks
+==466224==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466224== 
+==466224== All heap blocks were freed -- no leaks are possible
+==466224== 
+==466224== For lists of detected and suppressed errors, rerun with: -s
+==466224== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466225== Memcheck, a memory error detector
+==466225== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466225== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466225== Command: /usr/bin/wc
+==466225== 
+==466225== 
+==466225== HEAP SUMMARY:
+==466225==     in use at exit: 0 bytes in 0 blocks
+==466225==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466225== 
+==466225== All heap blocks were freed -- no leaks are possible
+==466225== 
+==466225== For lists of detected and suppressed errors, rerun with: -s
+==466225== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466223== 
+==466223== HEAP SUMMARY:
+==466223==     in use at exit: 0 bytes in 0 blocks
+==466223==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466223== 
+==466223== All heap blocks were freed -- no leaks are possible
+==466223== 
+==466223== For lists of detected and suppressed errors, rerun with: -s
+==466223== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       4      24
+
+==466228== Memcheck, a memory error detector
+==466228== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466228== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466228== Command: ./pipex file1 catlkj\ -e wc file8
+==466228== 
+catlkj: No such file or directory
+==466229== 
+==466229== HEAP SUMMARY:
+==466229==     in use at exit: 0 bytes in 0 blocks
+==466229==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466229== 
+==466229== All heap blocks were freed -- no leaks are possible
+==466229== 
+==466229== For lists of detected and suppressed errors, rerun with: -s
+==466229== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466230== Memcheck, a memory error detector
+==466230== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466230== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466230== Command: /usr/bin/wc
+==466230== 
+==466230== 
+==466230== HEAP SUMMARY:
+==466230==     in use at exit: 0 bytes in 0 blocks
+==466230==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466230== 
+==466230== All heap blocks were freed -- no leaks are possible
+==466230== 
+==466230== For lists of detected and suppressed errors, rerun with: -s
+==466230== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466228== 
+==466228== HEAP SUMMARY:
+==466228==     in use at exit: 0 bytes in 0 blocks
+==466228==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466228== 
+==466228== All heap blocks were freed -- no leaks are possible
+==466228== 
+==466228== For lists of detected and suppressed errors, rerun with: -s
+==466228== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466233== Memcheck, a memory error detector
+==466233== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466233== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466233== Command: ./pipex file1 cat\ -e wclkj file8
+==466233== 
+==466234== Memcheck, a memory error detector
+==466234== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466234== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466234== Command: /usr/bin/cat -e
+==466234== 
+==466234== 
+==466234== HEAP SUMMARY:
+==466234==     in use at exit: 0 bytes in 0 blocks
+==466234==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466234== 
+==466234== All heap blocks were freed -- no leaks are possible
+==466234== 
+==466234== For lists of detected and suppressed errors, rerun with: -s
+==466234== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466235== 
+==466235== HEAP SUMMARY:
+==466235==     in use at exit: 0 bytes in 0 blocks
+==466235==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466235== 
+==466235== All heap blocks were freed -- no leaks are possible
+==466235== 
+==466235== For lists of detected and suppressed errors, rerun with: -s
+==466235== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466233== 
+==466233== HEAP SUMMARY:
+==466233==     in use at exit: 0 bytes in 0 blocks
+==466233==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466233== 
+==466233== All heap blocks were freed -- no leaks are possible
+==466233== 
+==466233== For lists of detected and suppressed errors, rerun with: -s
+==466233== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466238== Memcheck, a memory error detector
+==466238== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466238== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466238== Command: ./pipex file1 catlkj\ -e wclkj file8
+==466238== 
+catlkj: No such file or directory
+==466239== 
+==466239== HEAP SUMMARY:
+==466239==     in use at exit: 0 bytes in 0 blocks
+==466239==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466239== 
+==466239== All heap blocks were freed -- no leaks are possible
+==466239== 
+==466239== For lists of detected and suppressed errors, rerun with: -s
+==466239== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466240== 
+==466240== HEAP SUMMARY:
+==466240==     in use at exit: 0 bytes in 0 blocks
+==466240==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466240== 
+==466240== All heap blocks were freed -- no leaks are possible
+==466240== 
+==466240== For lists of detected and suppressed errors, rerun with: -s
+==466240== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466238== 
+==466238== HEAP SUMMARY:
+==466238==     in use at exit: 0 bytes in 0 blocks
+==466238==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466238== 
+==466238== All heap blocks were freed -- no leaks are possible
+==466238== 
+==466238== For lists of detected and suppressed errors, rerun with: -s
+==466238== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466243== Memcheck, a memory error detector
+==466243== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466243== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466243== Command: ./pipex file1 cat wc file8
+==466243== 
+==466244== Memcheck, a memory error detector
+==466244== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466244== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466244== Command: /usr/bin/cat
+==466244== 
+==466244== 
+==466244== HEAP SUMMARY:
+==466244==     in use at exit: 0 bytes in 0 blocks
+==466244==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466244== 
+==466244== All heap blocks were freed -- no leaks are possible
+==466244== 
+==466244== For lists of detected and suppressed errors, rerun with: -s
+==466244== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466254== Memcheck, a memory error detector
+==466254== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466254== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466254== Command: /usr/bin/wc
+==466254== 
+==466254== 
+==466254== HEAP SUMMARY:
+==466254==     in use at exit: 0 bytes in 0 blocks
+==466254==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466254== 
+==466254== All heap blocks were freed -- no leaks are possible
+==466254== 
+==466254== For lists of detected and suppressed errors, rerun with: -s
+==466254== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466243== 
+==466243== HEAP SUMMARY:
+==466243==     in use at exit: 0 bytes in 0 blocks
+==466243==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466243== 
+==466243== All heap blocks were freed -- no leaks are possible
+==466243== 
+==466243== For lists of detected and suppressed errors, rerun with: -s
+==466243== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      4       3      20
+
+==466257== Memcheck, a memory error detector
+==466257== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466257== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466257== Command: ./pipex file1 catlkj wc file8
+==466257== 
+catlkj: No such file or directory
+==466258== 
+==466258== HEAP SUMMARY:
+==466258==     in use at exit: 0 bytes in 0 blocks
+==466258==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466258== 
+==466258== All heap blocks were freed -- no leaks are possible
+==466258== 
+==466258== For lists of detected and suppressed errors, rerun with: -s
+==466258== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466259== Memcheck, a memory error detector
+==466259== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466259== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466259== Command: /usr/bin/wc
+==466259== 
+==466259== 
+==466259== HEAP SUMMARY:
+==466259==     in use at exit: 0 bytes in 0 blocks
+==466259==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466259== 
+==466259== All heap blocks were freed -- no leaks are possible
+==466259== 
+==466259== For lists of detected and suppressed errors, rerun with: -s
+==466259== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466257== 
+==466257== HEAP SUMMARY:
+==466257==     in use at exit: 0 bytes in 0 blocks
+==466257==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466257== 
+==466257== All heap blocks were freed -- no leaks are possible
+==466257== 
+==466257== For lists of detected and suppressed errors, rerun with: -s
+==466257== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466262== Memcheck, a memory error detector
+==466262== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466262== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466262== Command: ./pipex file1 cat wclkj file8
+==466262== 
+==466263== Memcheck, a memory error detector
+==466263== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466263== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466263== Command: /usr/bin/cat
+==466263== 
+==466263== 
+==466263== HEAP SUMMARY:
+==466263==     in use at exit: 0 bytes in 0 blocks
+==466263==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466263== 
+==466263== All heap blocks were freed -- no leaks are possible
+==466263== 
+==466263== For lists of detected and suppressed errors, rerun with: -s
+==466263== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466264== 
+==466264== HEAP SUMMARY:
+==466264==     in use at exit: 0 bytes in 0 blocks
+==466264==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466264== 
+==466264== All heap blocks were freed -- no leaks are possible
+==466264== 
+==466264== For lists of detected and suppressed errors, rerun with: -s
+==466264== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466262== 
+==466262== HEAP SUMMARY:
+==466262==     in use at exit: 0 bytes in 0 blocks
+==466262==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466262== 
+==466262== All heap blocks were freed -- no leaks are possible
+==466262== 
+==466262== For lists of detected and suppressed errors, rerun with: -s
+==466262== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466267== Memcheck, a memory error detector
+==466267== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466267== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466267== Command: ./pipex file1 catlkj wclkj file8
+==466267== 
+catlkj: No such file or directory
+==466268== 
+==466268== HEAP SUMMARY:
+==466268==     in use at exit: 0 bytes in 0 blocks
+==466268==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466268== 
+==466268== All heap blocks were freed -- no leaks are possible
+==466268== 
+==466268== For lists of detected and suppressed errors, rerun with: -s
+==466268== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466269== 
+==466269== HEAP SUMMARY:
+==466269==     in use at exit: 0 bytes in 0 blocks
+==466269==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466269== 
+==466269== All heap blocks were freed -- no leaks are possible
+==466269== 
+==466269== For lists of detected and suppressed errors, rerun with: -s
+==466269== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466267== 
+==466267== HEAP SUMMARY:
+==466267==     in use at exit: 0 bytes in 0 blocks
+==466267==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466267== 
+==466267== All heap blocks were freed -- no leaks are possible
+==466267== 
+==466267== For lists of detected and suppressed errors, rerun with: -s
+==466267== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466272== Memcheck, a memory error detector
+==466272== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466272== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466272== Command: ./pipex file1lk cat\ -e /usr/bin/wc\ -l file8
+==466272== 
+file1lk: No such file or directory
+==466273== Memcheck, a memory error detector
+==466273== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466273== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466273== Command: /usr/bin/cat -e
+==466273== 
+==466273== 
+==466273== HEAP SUMMARY:
+==466273==     in use at exit: 0 bytes in 0 blocks
+==466273==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466273== 
+==466273== All heap blocks were freed -- no leaks are possible
+==466273== 
+==466273== For lists of detected and suppressed errors, rerun with: -s
+==466273== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466274== Memcheck, a memory error detector
+==466274== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466274== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466274== Command: /usr/bin/wc -l
+==466274== 
+==466274== 
+==466274== HEAP SUMMARY:
+==466274==     in use at exit: 0 bytes in 0 blocks
+==466274==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466274== 
+==466274== All heap blocks were freed -- no leaks are possible
+==466274== 
+==466274== For lists of detected and suppressed errors, rerun with: -s
+==466274== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466272== 
+==466272== HEAP SUMMARY:
+==466272==     in use at exit: 0 bytes in 0 blocks
+==466272==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466272== 
+==466272== All heap blocks were freed -- no leaks are possible
+==466272== 
+==466272== For lists of detected and suppressed errors, rerun with: -s
+==466272== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466277== Memcheck, a memory error detector
+==466277== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466277== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466277== Command: ./pipex file1lk cat /usr/bin/wc\ -l file8
+==466277== 
+file1lk: No such file or directory
+==466278== Memcheck, a memory error detector
+==466278== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466278== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466278== Command: /usr/bin/cat
+==466278== 
+==466278== 
+==466278== HEAP SUMMARY:
+==466278==     in use at exit: 0 bytes in 0 blocks
+==466278==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466278== 
+==466278== All heap blocks were freed -- no leaks are possible
+==466278== 
+==466278== For lists of detected and suppressed errors, rerun with: -s
+==466278== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466279== Memcheck, a memory error detector
+==466279== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466279== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466279== Command: /usr/bin/wc -l
+==466279== 
+==466279== 
+==466279== HEAP SUMMARY:
+==466279==     in use at exit: 0 bytes in 0 blocks
+==466279==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466279== 
+==466279== All heap blocks were freed -- no leaks are possible
+==466279== 
+==466279== For lists of detected and suppressed errors, rerun with: -s
+==466279== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466277== 
+==466277== HEAP SUMMARY:
+==466277==     in use at exit: 0 bytes in 0 blocks
+==466277==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466277== 
+==466277== All heap blocks were freed -- no leaks are possible
+==466277== 
+==466277== For lists of detected and suppressed errors, rerun with: -s
+==466277== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466282== Memcheck, a memory error detector
+==466282== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466282== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466282== Command: ./pipex file1lk cat\ -e wc file8
+==466282== 
+file1lk: No such file or directory
+==466293== Memcheck, a memory error detector
+==466293== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466293== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466293== Command: /usr/bin/cat -e
+==466293== 
+==466293== 
+==466293== HEAP SUMMARY:
+==466293==     in use at exit: 0 bytes in 0 blocks
+==466293==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466293== 
+==466293== All heap blocks were freed -- no leaks are possible
+==466293== 
+==466293== For lists of detected and suppressed errors, rerun with: -s
+==466293== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466294== Memcheck, a memory error detector
+==466294== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466294== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466294== Command: /usr/bin/wc
+==466294== 
+==466294== 
+==466294== HEAP SUMMARY:
+==466294==     in use at exit: 0 bytes in 0 blocks
+==466294==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466294== 
+==466294== All heap blocks were freed -- no leaks are possible
+==466294== 
+==466294== For lists of detected and suppressed errors, rerun with: -s
+==466294== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466282== 
+==466282== HEAP SUMMARY:
+==466282==     in use at exit: 0 bytes in 0 blocks
+==466282==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466282== 
+==466282== All heap blocks were freed -- no leaks are possible
+==466282== 
+==466282== For lists of detected and suppressed errors, rerun with: -s
+==466282== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466297== Memcheck, a memory error detector
+==466297== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466297== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466297== Command: ./pipex file1lk cat wc file8
+==466297== 
+file1lk: No such file or directory
+==466298== Memcheck, a memory error detector
+==466298== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466298== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466298== Command: /usr/bin/cat
+==466298== 
+==466298== 
+==466298== HEAP SUMMARY:
+==466298==     in use at exit: 0 bytes in 0 blocks
+==466298==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466298== 
+==466298== All heap blocks were freed -- no leaks are possible
+==466298== 
+==466298== For lists of detected and suppressed errors, rerun with: -s
+==466298== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466299== Memcheck, a memory error detector
+==466299== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466299== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466299== Command: /usr/bin/wc
+==466299== 
+==466299== 
+==466299== HEAP SUMMARY:
+==466299==     in use at exit: 0 bytes in 0 blocks
+==466299==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466299== 
+==466299== All heap blocks were freed -- no leaks are possible
+==466299== 
+==466299== For lists of detected and suppressed errors, rerun with: -s
+==466299== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466297== 
+==466297== HEAP SUMMARY:
+==466297==     in use at exit: 0 bytes in 0 blocks
+==466297==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466297== 
+==466297== All heap blocks were freed -- no leaks are possible
+==466297== 
+==466297== For lists of detected and suppressed errors, rerun with: -s
+==466297== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466302== Memcheck, a memory error detector
+==466302== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466302== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466302== Command: ./pipex file1lk cat\ -e /usr/bin/wc\ -l file8
+==466302== 
+file1lk: No such file or directory
+==466303== Memcheck, a memory error detector
+==466303== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466303== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466303== Command: /usr/bin/cat -e
+==466303== 
+==466303== 
+==466303== HEAP SUMMARY:
+==466303==     in use at exit: 0 bytes in 0 blocks
+==466303==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466303== 
+==466303== All heap blocks were freed -- no leaks are possible
+==466303== 
+==466303== For lists of detected and suppressed errors, rerun with: -s
+==466303== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466304== Memcheck, a memory error detector
+==466304== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466304== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466304== Command: /usr/bin/wc -l
+==466304== 
+==466304== 
+==466304== HEAP SUMMARY:
+==466304==     in use at exit: 0 bytes in 0 blocks
+==466304==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466304== 
+==466304== All heap blocks were freed -- no leaks are possible
+==466304== 
+==466304== For lists of detected and suppressed errors, rerun with: -s
+==466304== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466302== 
+==466302== HEAP SUMMARY:
+==466302==     in use at exit: 0 bytes in 0 blocks
+==466302==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466302== 
+==466302== All heap blocks were freed -- no leaks are possible
+==466302== 
+==466302== For lists of detected and suppressed errors, rerun with: -s
+==466302== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466307== Memcheck, a memory error detector
+==466307== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466307== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466307== Command: ./pipex file1lk catlkj\ -e /usr/bin/wc\ -l file8
+==466307== 
+catlkj: No such file or directory
+==466308== 
+==466308== HEAP SUMMARY:
+==466308==     in use at exit: 0 bytes in 0 blocks
+==466308==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466308== 
+==466308== All heap blocks were freed -- no leaks are possible
+==466308== 
+==466308== For lists of detected and suppressed errors, rerun with: -s
+==466308== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466309== Memcheck, a memory error detector
+==466309== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466309== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466309== Command: /usr/bin/wc -l
+==466309== 
+==466309== 
+==466309== HEAP SUMMARY:
+==466309==     in use at exit: 0 bytes in 0 blocks
+==466309==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466309== 
+==466309== All heap blocks were freed -- no leaks are possible
+==466309== 
+==466309== For lists of detected and suppressed errors, rerun with: -s
+==466309== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466307== 
+==466307== HEAP SUMMARY:
+==466307==     in use at exit: 0 bytes in 0 blocks
+==466307==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466307== 
+==466307== All heap blocks were freed -- no leaks are possible
+==466307== 
+==466307== For lists of detected and suppressed errors, rerun with: -s
+==466307== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466312== Memcheck, a memory error detector
+==466312== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466312== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466312== Command: ./pipex file1lk cat\ -e /usr/bin/wclkj\ -l file8
+==466312== 
+file1lk: No such file or directory
+==466313== Memcheck, a memory error detector
+==466313== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466313== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466313== Command: /usr/bin/cat -e
+==466313== 
+==466313== 
+==466313== HEAP SUMMARY:
+==466313==     in use at exit: 0 bytes in 0 blocks
+==466313==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466313== 
+==466313== All heap blocks were freed -- no leaks are possible
+==466313== 
+==466313== For lists of detected and suppressed errors, rerun with: -s
+==466313== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466314== 
+==466314== HEAP SUMMARY:
+==466314==     in use at exit: 0 bytes in 0 blocks
+==466314==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466314== 
+==466314== All heap blocks were freed -- no leaks are possible
+==466314== 
+==466314== For lists of detected and suppressed errors, rerun with: -s
+==466314== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466312== 
+==466312== HEAP SUMMARY:
+==466312==     in use at exit: 0 bytes in 0 blocks
+==466312==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466312== 
+==466312== All heap blocks were freed -- no leaks are possible
+==466312== 
+==466312== For lists of detected and suppressed errors, rerun with: -s
+==466312== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466317== Memcheck, a memory error detector
+==466317== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466317== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466317== Command: ./pipex file1lk catlkj\ -e /usr/bin/wclkj\ -l file8
+==466317== 
+catlkj: No such file or directory
+==466318== 
+==466318== HEAP SUMMARY:
+==466318==     in use at exit: 0 bytes in 0 blocks
+==466318==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466318== 
+==466318== All heap blocks were freed -- no leaks are possible
+==466318== 
+==466318== For lists of detected and suppressed errors, rerun with: -s
+==466318== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466319== 
+==466319== HEAP SUMMARY:
+==466319==     in use at exit: 0 bytes in 0 blocks
+==466319==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466319== 
+==466319== All heap blocks were freed -- no leaks are possible
+==466319== 
+==466319== For lists of detected and suppressed errors, rerun with: -s
+==466319== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466317== 
+==466317== HEAP SUMMARY:
+==466317==     in use at exit: 0 bytes in 0 blocks
+==466317==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466317== 
+==466317== All heap blocks were freed -- no leaks are possible
+==466317== 
+==466317== For lists of detected and suppressed errors, rerun with: -s
+==466317== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466322== Memcheck, a memory error detector
+==466322== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466322== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466322== Command: ./pipex file1lk cat /usr/bin/wc\ -l file8
+==466322== 
+file1lk: No such file or directory
+==466333== Memcheck, a memory error detector
+==466333== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466333== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466333== Command: /usr/bin/cat
+==466333== 
+==466333== 
+==466333== HEAP SUMMARY:
+==466333==     in use at exit: 0 bytes in 0 blocks
+==466333==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466333== 
+==466333== All heap blocks were freed -- no leaks are possible
+==466333== 
+==466333== For lists of detected and suppressed errors, rerun with: -s
+==466333== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466334== Memcheck, a memory error detector
+==466334== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466334== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466334== Command: /usr/bin/wc -l
+==466334== 
+==466334== 
+==466334== HEAP SUMMARY:
+==466334==     in use at exit: 0 bytes in 0 blocks
+==466334==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466334== 
+==466334== All heap blocks were freed -- no leaks are possible
+==466334== 
+==466334== For lists of detected and suppressed errors, rerun with: -s
+==466334== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466322== 
+==466322== HEAP SUMMARY:
+==466322==     in use at exit: 0 bytes in 0 blocks
+==466322==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466322== 
+==466322== All heap blocks were freed -- no leaks are possible
+==466322== 
+==466322== For lists of detected and suppressed errors, rerun with: -s
+==466322== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466337== Memcheck, a memory error detector
+==466337== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466337== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466337== Command: ./pipex file1lk catlkj /usr/bin/wc\ -l file8
+==466337== 
+catlkj: No such file or directory
+==466338== 
+==466338== HEAP SUMMARY:
+==466338==     in use at exit: 0 bytes in 0 blocks
+==466338==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466338== 
+==466338== All heap blocks were freed -- no leaks are possible
+==466338== 
+==466338== For lists of detected and suppressed errors, rerun with: -s
+==466338== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466339== Memcheck, a memory error detector
+==466339== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466339== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466339== Command: /usr/bin/wc -l
+==466339== 
+==466339== 
+==466339== HEAP SUMMARY:
+==466339==     in use at exit: 0 bytes in 0 blocks
+==466339==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466339== 
+==466339== All heap blocks were freed -- no leaks are possible
+==466339== 
+==466339== For lists of detected and suppressed errors, rerun with: -s
+==466339== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466337== 
+==466337== HEAP SUMMARY:
+==466337==     in use at exit: 0 bytes in 0 blocks
+==466337==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466337== 
+==466337== All heap blocks were freed -- no leaks are possible
+==466337== 
+==466337== For lists of detected and suppressed errors, rerun with: -s
+==466337== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+0
+
+==466342== Memcheck, a memory error detector
+==466342== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466342== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466342== Command: ./pipex file1lk cat /usr/bin/wclkj\ -l file8
+==466342== 
+file1lk: No such file or directory
+==466343== Memcheck, a memory error detector
+==466343== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466343== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466343== Command: /usr/bin/cat
+==466343== 
+==466343== 
+==466343== HEAP SUMMARY:
+==466343==     in use at exit: 0 bytes in 0 blocks
+==466343==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466343== 
+==466343== All heap blocks were freed -- no leaks are possible
+==466343== 
+==466343== For lists of detected and suppressed errors, rerun with: -s
+==466343== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466344== 
+==466344== HEAP SUMMARY:
+==466344==     in use at exit: 0 bytes in 0 blocks
+==466344==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466344== 
+==466344== All heap blocks were freed -- no leaks are possible
+==466344== 
+==466344== For lists of detected and suppressed errors, rerun with: -s
+==466344== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466342== 
+==466342== HEAP SUMMARY:
+==466342==     in use at exit: 0 bytes in 0 blocks
+==466342==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466342== 
+==466342== All heap blocks were freed -- no leaks are possible
+==466342== 
+==466342== For lists of detected and suppressed errors, rerun with: -s
+==466342== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466347== Memcheck, a memory error detector
+==466347== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466347== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466347== Command: ./pipex file1lk catlkj /usr/bin/wclkj\ -l file8
+==466347== 
+catlkj: No such file or directory
+==466348== 
+==466348== HEAP SUMMARY:
+==466348==     in use at exit: 0 bytes in 0 blocks
+==466348==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466348== 
+==466348== All heap blocks were freed -- no leaks are possible
+==466348== 
+==466348== For lists of detected and suppressed errors, rerun with: -s
+==466348== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+/usr/bin/wclkj: No such file or directory
+==466349== 
+==466349== HEAP SUMMARY:
+==466349==     in use at exit: 0 bytes in 0 blocks
+==466349==   total heap usage: 4 allocs, 4 frees, 57 bytes allocated
+==466349== 
+==466349== All heap blocks were freed -- no leaks are possible
+==466349== 
+==466349== For lists of detected and suppressed errors, rerun with: -s
+==466349== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466347== 
+==466347== HEAP SUMMARY:
+==466347==     in use at exit: 0 bytes in 0 blocks
+==466347==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466347== 
+==466347== All heap blocks were freed -- no leaks are possible
+==466347== 
+==466347== For lists of detected and suppressed errors, rerun with: -s
+==466347== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466352== Memcheck, a memory error detector
+==466352== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466352== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466352== Command: ./pipex file1lk cat\ -e wc file8
+==466352== 
+file1lk: No such file or directory
+==466353== Memcheck, a memory error detector
+==466353== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466353== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466353== Command: /usr/bin/cat -e
+==466353== 
+==466353== 
+==466353== HEAP SUMMARY:
+==466353==     in use at exit: 0 bytes in 0 blocks
+==466353==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466353== 
+==466353== All heap blocks were freed -- no leaks are possible
+==466353== 
+==466353== For lists of detected and suppressed errors, rerun with: -s
+==466353== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466355== Memcheck, a memory error detector
+==466355== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466355== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466355== Command: /usr/bin/wc
+==466355== 
+==466355== 
+==466355== HEAP SUMMARY:
+==466355==     in use at exit: 0 bytes in 0 blocks
+==466355==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466355== 
+==466355== All heap blocks were freed -- no leaks are possible
+==466355== 
+==466355== For lists of detected and suppressed errors, rerun with: -s
+==466355== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466352== 
+==466352== HEAP SUMMARY:
+==466352==     in use at exit: 0 bytes in 0 blocks
+==466352==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466352== 
+==466352== All heap blocks were freed -- no leaks are possible
+==466352== 
+==466352== For lists of detected and suppressed errors, rerun with: -s
+==466352== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466358== Memcheck, a memory error detector
+==466358== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466358== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466358== Command: ./pipex file1lk catlkj\ -e wc file8
+==466358== 
+catlkj: No such file or directory
+==466359== 
+==466359== HEAP SUMMARY:
+==466359==     in use at exit: 0 bytes in 0 blocks
+==466359==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466359== 
+==466359== All heap blocks were freed -- no leaks are possible
+==466359== 
+==466359== For lists of detected and suppressed errors, rerun with: -s
+==466359== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466360== Memcheck, a memory error detector
+==466360== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466360== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466360== Command: /usr/bin/wc
+==466360== 
+==466360== 
+==466360== HEAP SUMMARY:
+==466360==     in use at exit: 0 bytes in 0 blocks
+==466360==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466360== 
+==466360== All heap blocks were freed -- no leaks are possible
+==466360== 
+==466360== For lists of detected and suppressed errors, rerun with: -s
+==466360== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466358== 
+==466358== HEAP SUMMARY:
+==466358==     in use at exit: 0 bytes in 0 blocks
+==466358==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466358== 
+==466358== All heap blocks were freed -- no leaks are possible
+==466358== 
+==466358== For lists of detected and suppressed errors, rerun with: -s
+==466358== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466363== Memcheck, a memory error detector
+==466363== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466363== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466363== Command: ./pipex file1lk cat\ -e wclkj file8
+==466363== 
+file1lk: No such file or directory
+==466373== Memcheck, a memory error detector
+==466373== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466373== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466373== Command: /usr/bin/cat -e
+==466373== 
+==466373== 
+==466373== HEAP SUMMARY:
+==466373==     in use at exit: 0 bytes in 0 blocks
+==466373==   total heap usage: 4 allocs, 4 frees, 794,686 bytes allocated
+==466373== 
+==466373== All heap blocks were freed -- no leaks are possible
+==466373== 
+==466373== For lists of detected and suppressed errors, rerun with: -s
+==466373== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466374== 
+==466374== HEAP SUMMARY:
+==466374==     in use at exit: 0 bytes in 0 blocks
+==466374==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466374== 
+==466374== All heap blocks were freed -- no leaks are possible
+==466374== 
+==466374== For lists of detected and suppressed errors, rerun with: -s
+==466374== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466363== 
+==466363== HEAP SUMMARY:
+==466363==     in use at exit: 0 bytes in 0 blocks
+==466363==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466363== 
+==466363== All heap blocks were freed -- no leaks are possible
+==466363== 
+==466363== For lists of detected and suppressed errors, rerun with: -s
+==466363== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466377== Memcheck, a memory error detector
+==466377== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466377== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466377== Command: ./pipex file1lk catlkj\ -e wclkj file8
+==466377== 
+catlkj: No such file or directory
+==466378== 
+==466378== HEAP SUMMARY:
+==466378==     in use at exit: 0 bytes in 0 blocks
+==466378==   total heap usage: 88 allocs, 88 frees, 2,548 bytes allocated
+==466378== 
+==466378== All heap blocks were freed -- no leaks are possible
+==466378== 
+==466378== For lists of detected and suppressed errors, rerun with: -s
+==466378== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466379== 
+==466379== HEAP SUMMARY:
+==466379==     in use at exit: 0 bytes in 0 blocks
+==466379==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466379== 
+==466379== All heap blocks were freed -- no leaks are possible
+==466379== 
+==466379== For lists of detected and suppressed errors, rerun with: -s
+==466379== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466377== 
+==466377== HEAP SUMMARY:
+==466377==     in use at exit: 0 bytes in 0 blocks
+==466377==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466377== 
+==466377== All heap blocks were freed -- no leaks are possible
+==466377== 
+==466377== For lists of detected and suppressed errors, rerun with: -s
+==466377== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466382== Memcheck, a memory error detector
+==466382== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466382== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466382== Command: ./pipex file1lk cat wc file8
+==466382== 
+file1lk: No such file or directory
+==466383== Memcheck, a memory error detector
+==466383== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466383== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466383== Command: /usr/bin/cat
+==466383== 
+==466383== 
+==466383== HEAP SUMMARY:
+==466383==     in use at exit: 0 bytes in 0 blocks
+==466383==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466383== 
+==466383== All heap blocks were freed -- no leaks are possible
+==466383== 
+==466383== For lists of detected and suppressed errors, rerun with: -s
+==466383== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466385== Memcheck, a memory error detector
+==466385== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466385== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466385== Command: /usr/bin/wc
+==466385== 
+==466385== 
+==466385== HEAP SUMMARY:
+==466385==     in use at exit: 0 bytes in 0 blocks
+==466385==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466385== 
+==466385== All heap blocks were freed -- no leaks are possible
+==466385== 
+==466385== For lists of detected and suppressed errors, rerun with: -s
+==466385== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466382== 
+==466382== HEAP SUMMARY:
+==466382==     in use at exit: 0 bytes in 0 blocks
+==466382==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466382== 
+==466382== All heap blocks were freed -- no leaks are possible
+==466382== 
+==466382== For lists of detected and suppressed errors, rerun with: -s
+==466382== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466388== Memcheck, a memory error detector
+==466388== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466388== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466388== Command: ./pipex file1lk catlkj wc file8
+==466388== 
+catlkj: No such file or directory
+==466389== 
+==466389== HEAP SUMMARY:
+==466389==     in use at exit: 0 bytes in 0 blocks
+==466389==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466389== 
+==466389== All heap blocks were freed -- no leaks are possible
+==466389== 
+==466389== For lists of detected and suppressed errors, rerun with: -s
+==466389== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466390== Memcheck, a memory error detector
+==466390== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466390== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466390== Command: /usr/bin/wc
+==466390== 
+==466390== 
+==466390== HEAP SUMMARY:
+==466390==     in use at exit: 0 bytes in 0 blocks
+==466390==   total heap usage: 5 allocs, 5 frees, 4,340 bytes allocated
+==466390== 
+==466390== All heap blocks were freed -- no leaks are possible
+==466390== 
+==466390== For lists of detected and suppressed errors, rerun with: -s
+==466390== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466388== 
+==466388== HEAP SUMMARY:
+==466388==     in use at exit: 0 bytes in 0 blocks
+==466388==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466388== 
+==466388== All heap blocks were freed -- no leaks are possible
+==466388== 
+==466388== For lists of detected and suppressed errors, rerun with: -s
+==466388== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+      0       0       0
+
+==466393== Memcheck, a memory error detector
+==466393== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466393== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466393== Command: ./pipex file1lk cat wclkj file8
+==466393== 
+file1lk: No such file or directory
+==466394== Memcheck, a memory error detector
+==466394== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466394== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466394== Command: /usr/bin/cat
+==466394== 
+==466394== 
+==466394== HEAP SUMMARY:
+==466394==     in use at exit: 0 bytes in 0 blocks
+==466394==   total heap usage: 3 allocs, 3 frees, 135,211 bytes allocated
+==466394== 
+==466394== All heap blocks were freed -- no leaks are possible
+==466394== 
+==466394== For lists of detected and suppressed errors, rerun with: -s
+==466394== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466395== 
+==466395== HEAP SUMMARY:
+==466395==     in use at exit: 0 bytes in 0 blocks
+==466395==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466395== 
+==466395== All heap blocks were freed -- no leaks are possible
+==466395== 
+==466395== For lists of detected and suppressed errors, rerun with: -s
+==466395== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466393== 
+==466393== HEAP SUMMARY:
+==466393==     in use at exit: 0 bytes in 0 blocks
+==466393==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466393== 
+==466393== All heap blocks were freed -- no leaks are possible
+==466393== 
+==466393== For lists of detected and suppressed errors, rerun with: -s
+==466393== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory
+==466398== Memcheck, a memory error detector
+==466398== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==466398== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==466398== Command: ./pipex file1lk catlkj wclkj file8
+==466398== 
+catlkj: No such file or directory
+==466399== 
+==466399== HEAP SUMMARY:
+==466399==     in use at exit: 0 bytes in 0 blocks
+==466399==   total heap usage: 87 allocs, 87 frees, 2,537 bytes allocated
+==466399== 
+==466399== All heap blocks were freed -- no leaks are possible
+==466399== 
+==466399== For lists of detected and suppressed errors, rerun with: -s
+==466399== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+wclkj: No such file or directory
+==466400== 
+==466400== HEAP SUMMARY:
+==466400==     in use at exit: 0 bytes in 0 blocks
+==466400==   total heap usage: 87 allocs, 87 frees, 2,508 bytes allocated
+==466400== 
+==466400== All heap blocks were freed -- no leaks are possible
+==466400== 
+==466400== For lists of detected and suppressed errors, rerun with: -s
+==466400== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==466398== 
+==466398== HEAP SUMMARY:
+==466398==     in use at exit: 0 bytes in 0 blocks
+==466398==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==466398== 
+==466398== All heap blocks were freed -- no leaks are possible
+==466398== 
+==466398== For lists of detected and suppressed errors, rerun with: -s
+==466398== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: file8: No such file or directory

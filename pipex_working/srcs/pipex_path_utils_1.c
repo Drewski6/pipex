@@ -87,13 +87,11 @@ void	px_get_abspath(t_pipex *pipex)
 			px_get_path_tab(pipex);
 		px_build_abspath(pipex);
 	}
-	if (access(pipex->cmd_abspath, F_OK | X_OK))
-		px_error(pipex, "access");
 }
 
-void	px_get_execargs(t_pipex *pipex, int com_num)
+void	px_get_execargs(t_pipex *pipex)
 {
-	pipex->cmd_args = ft_split(pipex->argv[com_num], ' ');
+	pipex->cmd_args = ft_split(pipex->argv[pipex->com_num], ' ');
 	if (!pipex->cmd_args)
 		px_error(pipex, "malloc");
 }

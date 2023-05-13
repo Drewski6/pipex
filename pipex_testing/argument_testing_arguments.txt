@@ -1,0 +1,21 @@
+file1 "cat -e" "/usr/bin/wc -l" file8
+file1 cat "/usr/bin/wc -l" file8
+file1 "cat -e" wc file8
+file1 cat wc file8
+file1 "cat -e" "/usr/bin/wc -l" file8
+file1 "catlkj -e" "/usr/bin/wc -l" file8
+file1 "cat -e" "/usr/bin/wclkj -l" file8
+file1 "catlkj -e" "/usr/bin/wclkj -l" file8
+file1 cat "/usr/bin/wc -l" file8
+file1 catlkj "/usr/bin/wc -l" file8
+file1 cat "/usr/bin/wclkj -l" file8
+file1 catlkj "/usr/bin/wclkj -l" file8
+file1 "cat -e" wc file8
+file1 "catlkj -e" wc file8
+file1 "cat -e" wclkj file8
+file1 "catlkj -e" wclkj file8
+file1 cat wc file8
+file1 catlkj wc file8
+file1 cat wclkj file8
+file1 catlkj wclkj file8
+file1lksjdlkfj "cat -e" "/usr/bin/wc -l" file8

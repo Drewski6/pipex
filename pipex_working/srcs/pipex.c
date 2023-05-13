@@ -19,12 +19,9 @@ int	main(int argc, char **argv, char **envp)
 
 	pipex = &s_pipex;
 	ft_px_init(pipex, argc, argv, envp);
-	if (pipe(pipex->fds))
-		px_error(pipex, "pipe");
-	ft_infile(pipex);
-	px_fork(pipex, 0);
-	ft_outfile(pipex);
-	px_fork(pipex, 1);
+	px_fork_loop(pipex);
+	if (pipex->temp_used == -1)
+		unlink("/tmp/pipex");
 	if (pipex->path_tab)
 	{
 		ft_free_tab(pipex->path_tab);
