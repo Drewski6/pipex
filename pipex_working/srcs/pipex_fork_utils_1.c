@@ -12,6 +12,19 @@
 
 #include "pipex.h"
 
+void	px_pre_exec_cleanup(t_pipex *pipex)
+{
+	close(pipex->pipe[0]);
+	close(pipex->pipe[1]);
+	if (pipex->prev_pipe != -1)
+		close(pipex->prev_pipe);
+	if (!pipex->cmd_abspath)
+	{
+		px_close_fds(pipex);
+		exit(EXIT_FAILURE);
+	}
+}
+
 void	px_child_process(t_pipex *pipex)
 {
 	px_exec_args(pipex);
@@ -32,15 +45,7 @@ void	px_child_process(t_pipex *pipex)
 		ft_outfile(pipex);
 		dup2(pipex->prev_pipe, STDIN_FILENO);
 	}
-	close(pipex->pipe[0]);
-	close(pipex->pipe[1]);
-	if (pipex->prev_pipe != -1)
-		close(pipex->prev_pipe);
-	if (!pipex->cmd_abspath)
-	{
-		px_close_fds(pipex);
-		exit(EXIT_FAILURE);
-	}
+	px_pre_exec_cleanup(pipex);
 	execve(pipex->cmd_abspath, pipex->cmd_args, NULL);
 }
 

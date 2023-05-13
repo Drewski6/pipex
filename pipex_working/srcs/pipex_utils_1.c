@@ -39,23 +39,6 @@ int	px_error(t_pipex *pipex, char *err_message)
 	exit(EXIT_FAILURE);
 }
 
-int	px_error_nonfatal(t_pipex *pipex, char *err_message)
-{
-	if (pipex) {}
-	perror(err_message);
-	//if (pipex->cmd_abspath)
-	//{
-	//	free(pipex->cmd_abspath);
-	//	pipex->cmd_abspath = 0;
-	//}
-	//if (pipex->cmd_args)
-	//{
-	//	ft_free_tab(pipex->cmd_args);
-	//	pipex->cmd_args = 0;
-	//}
-	return (0);
-}
-
 int	ft_infile(t_pipex *pipex)
 {
 	int		in_file;

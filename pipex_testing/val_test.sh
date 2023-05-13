@@ -8,6 +8,10 @@ rm -f ${WORKING}valgrind.log
 rm -f ${TESTING}valgrind.log
 make re
 
+echo "hi" > file1
+echo "lkjlkj" >> file1
+echo "pipex testing" >> file1
+
 # not enough arguments
 rm -f file8 && valgrind --track-fds=all --leak-check=full ./pipex &>> valgrind.log && cat file8 &>> valgrind.log && echo "" &>> valgrind.log
 rm -f file8 && valgrind --track-fds=all --leak-check=full ./pipex file1 &>> valgrind.log && cat file8 &>> valgrind.log && echo "" &>> valgrind.log

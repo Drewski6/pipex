@@ -37,7 +37,6 @@ typedef struct s_pipex {
 
 //	pipex_utils_1.c
 int		px_error(t_pipex *pipex, char *err_message);
-int		px_error_nonfatal(t_pipex *pipex, char *err_message);
 int		ft_infile(t_pipex *pipex);
 int		ft_outfile(t_pipex *pipex);
 void	ft_free_tab(char **table);
@@ -55,8 +54,8 @@ void	px_get_abspath(t_pipex *pipex);
 void	px_get_execargs(t_pipex *pipex);
 
 //	pipex_fork_utils_1.c
+void	px_pre_exec_cleanup(t_pipex *pipex);
 void	px_child_process(t_pipex *pipex);
-int		px_fork(t_pipex *pipex);
 void	px_fork_loop(t_pipex *pipex);
 
 #endif
