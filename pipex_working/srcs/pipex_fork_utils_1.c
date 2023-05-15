@@ -46,7 +46,7 @@ void	px_child_process(t_pipex *pipex)
 		dup2(pipex->prev_pipe, STDIN_FILENO);
 	}
 	px_pre_exec_cleanup(pipex);
-	execve(pipex->cmd_abspath, pipex->cmd_args, NULL);
+	execve(pipex->cmd_abspath, pipex->cmd_args, pipex->envp);
 }
 
 void	px_fork_loop(t_pipex *pipex)
