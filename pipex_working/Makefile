@@ -41,7 +41,7 @@ INCS = pipex.h
 
 INCS_DIR = mandatory/includes/
 
-INCS_BONUS = pipex.h
+INCS_BONUS = pipex_bonus.h
 
 INCS_DIR_BONUS = bonus/includes/
 

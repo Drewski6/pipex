@@ -18,6 +18,8 @@ int	px_error(t_pipex *pipex, char *err_message)
 		ft_putstr_fd("Usage: pipex [infile] ['command'] ... [outfile]\n", 1);
 	else if (ft_strnstr(err_message, "no_path", 7))
 		ft_putstr_fd("path: No valid path found in envp\n", 1);
+	else if (ft_strnstr(err_message, "here_doc", 8))
+		ft_putstr_fd("here_doc: parse error near 'here_doc'\n", 1);
 	else
 		perror(err_message);
 	if (pipex->cmd_abspath)
@@ -44,6 +46,8 @@ int	px_infile(t_pipex *pipex)
 	int		in_file;
 
 	in_file = 0;
+	if (pipex->hd_limiter)
+		return (px_heredoc(pipex), 0);
 	if (pipex->temp_used < 0)
 	{
 		perror(pipex->argv[1]);

@@ -25,6 +25,7 @@ typedef struct s_pipex {
 	int			prev_pipe;
 	int			com_num;
 	int			temp_used;
+	char		*hd_limiter;
 	char		**argv;
 	char		**envp;
 	char		*cmd_abspath;
@@ -59,5 +60,6 @@ void	px_child_process(t_pipex *pipex);
 void	px_fork_loop(t_pipex *pipex);
 
 //	pipex_heredoc_utils_1.c
+void	px_heredoc(t_pipex *pipex);
 
 #endif

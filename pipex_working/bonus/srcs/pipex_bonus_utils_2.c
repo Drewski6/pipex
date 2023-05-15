@@ -21,8 +21,13 @@ int	px_init(t_pipex *pipex, int argc, char **argv, char **envp)
 	pipex->cmd_abspath = 0;
 	pipex->cmd_args = 0;
 	pipex->path_tab = 0;
+	pipex->hd_limiter = 0;
+	if (!ft_strncmp(argv[1], "here_doc", 9))
+		pipex->hd_limiter = argv[2];
 	if (argc < 5)
 		px_error(pipex, "args");
+	if (pipex->hd_limiter && argc < 7)
+		px_error(pipex, "here_doc");
 	pipex->argc = argc;
 	pipex->argv = argv;
 	pipex->envp = envp;

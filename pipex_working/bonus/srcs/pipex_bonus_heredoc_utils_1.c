@@ -11,3 +11,9 @@
 /* ************************************************************************** */
 
 #include "pipex_bonus.h"
+
+void	px_heredoc(t_pipex *pipex)
+{
+	if (pipex) {}
+	ft_printf("limiter was: %s", pipex->hd_limiter);
+}
