@@ -31,7 +31,7 @@ void	px_child_process(t_pipex *pipex)
 	if (access(pipex->cmd_abspath, F_OK | X_OK))
 		px_error(pipex, pipex->cmd_args[0]);
 	if ((!pipex->hd_limiter && pipex->com_num == 2)
-	|| (pipex->hd_limiter && pipex->com_num == 4))
+		|| (pipex->hd_limiter && pipex->com_num == 3))
 	{
 		px_infile(pipex);
 		dup2(pipex->pipe[1], STDOUT_FILENO);
@@ -53,7 +53,7 @@ void	px_child_process(t_pipex *pipex)
 void	px_fork_loop(t_pipex *pipex)
 {
 	if (pipex->hd_limiter)
-		pipex->com_num = 4;
+		pipex->com_num = 3;
 	else
 		pipex->com_num = 2;
 	while (pipex->com_num < pipex->argc - 1)

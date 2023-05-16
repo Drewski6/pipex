@@ -47,10 +47,11 @@ int	px_infile(t_pipex *pipex)
 
 	in_file = 0;
 	if (pipex->hd_limiter)
-		return (px_heredoc(pipex), 0);
+		px_heredoc(pipex);
 	if (pipex->temp_used < 0)
 	{
-		perror(pipex->argv[1]);
+		if (!pipex->hd_limiter)
+			perror(pipex->argv[1]);
 		in_file = open("/tmp/pipex", O_CREAT | O_RDONLY, 0666);
 		if (in_file < 0)
 			px_error(pipex, "open");
@@ -72,6 +73,16 @@ int	px_outfile(t_pipex *pipex)
 	char	*fn;
 
 	out_file = 0;
+	if (pipex->hd_limiter)
+	{
+		fn = pipex->argv[pipex->argc - 1];
+		out_file = open(fn, O_CREAT | O_WRONLY | O_APPEND, 0666);
+		if (out_file < 0)
+			px_error(pipex, "open");
+		dup2(out_file, STDOUT_FILENO);
+		close(out_file);
+		return (0);
+	}
 	fn = pipex->argv[pipex->argc - 1];
 	out_file = open(fn, O_CREAT | O_WRONLY | O_TRUNC, 0666);
 	if (out_file < 0)
