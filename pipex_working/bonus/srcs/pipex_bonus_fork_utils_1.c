@@ -60,8 +60,7 @@ void	px_fork_loop(t_pipex *pipex)
 	{
 		if (pipe(pipex->pipe))
 			px_error(pipex, "pipe");
-		//protect this ---v
-		ft_lstadd_back(&(pipex->pid), ft_lstnew_pid(fork()));
+		px_add_pid(pipex);
 		if (*(pid_t *)((ft_lstlast(pipex->pid))->content) < 0)
 			px_error(pipex, "fork");
 		if (*(pid_t *)((ft_lstlast(pipex->pid))->content) == 0)
@@ -75,4 +74,15 @@ void	px_fork_loop(t_pipex *pipex)
 		}
 		pipex->com_num++;
 	}
+}
+
+void	px_add_pid(t_pipex *pipex)
+{
+	t_list	*new_node;
+
+	new_node = 0;
+	new_node = ft_lstnew_pid(fork());
+	if (!new_node)
+		px_error(pipex, "malloc");
+	ft_lstadd_back(&(pipex->pid), new_node);
 }

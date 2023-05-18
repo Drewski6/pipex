@@ -39,6 +39,33 @@ int	px_init(t_pipex *pipex, int argc, char **argv, char **envp)
 	return (0);
 }
 
+void	px_re_init(t_pipex *pipex, int flags)
+{
+	if (pipex->cmd_abspath && flags % 2 == 1)
+	{
+		free(pipex->cmd_abspath);
+		pipex->cmd_abspath = 0;
+	}
+	flags = flags >> 1;
+	if (pipex->cmd_args && flags % 2 == 1)
+	{
+		ft_free_tab(pipex->cmd_args);
+		pipex->cmd_args = 0;
+	}
+	flags = flags >> 1;
+	if (pipex->path_tab && flags % 2 == 1)
+	{
+		ft_free_tab(pipex->path_tab);
+		pipex->path_tab = 0;
+	}
+	flags = flags >> 1;
+	if (pipex->pid && flags % 2 == 1)
+	{
+		ft_lstclear(&(pipex->pid), &ft_free_content);
+		pipex->pid = 0;
+	}
+}
+
 int	px_exec_args(t_pipex *pipex)
 {
 	px_get_execargs(pipex);

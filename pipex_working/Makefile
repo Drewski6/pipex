@@ -79,7 +79,7 @@ $(NAME): $(OBJS)
 $(BONUS): $(OBJS_BONUS)
 	@echo -e -n ${GREEN}
 	@make -C libft --silent
-	@echo -e ===== MAKING PIPEX =====
+	@echo -e ===== MAKING PIPEX BONUS =====
 	@echo -e -n ${NOCOLOR}
 	@$(CC) $(CFLAGS) $(OBJS_BONUS) $(LIBFT) -o $(BONUS)
 

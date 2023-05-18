@@ -22,26 +22,7 @@ int	px_error(t_pipex *pipex, char *err_message)
 		ft_putstr_fd("here_doc: parse error near 'here_doc'\n", 1);
 	else
 		perror(err_message);
-	if (pipex->cmd_abspath)
-	{
-		free(pipex->cmd_abspath);
-		pipex->cmd_abspath = 0;
-	}
-	if (pipex->cmd_args)
-	{
-		ft_free_tab(pipex->cmd_args);
-		pipex->cmd_args = 0;
-	}
-	if (pipex->path_tab)
-	{
-		ft_free_tab(pipex->path_tab);
-		pipex->path_tab = 0;
-	}
-	if (pipex->pid)
-	{
-		ft_lstclear(&(pipex->pid), &ft_free_content);
-		pipex->pid = 0;
-	}
+	px_re_init(pipex, 0b1111);
 	px_close_fds(pipex);
 	exit(EXIT_FAILURE);
 }

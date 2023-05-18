@@ -23,11 +23,7 @@ int	main(int argc, char **argv, char **envp)
 	if (pipex->temp_used == -1)
 		unlink("/tmp/pipex");
 	px_wait(pipex);
-	if (pipex->path_tab)
-	{
-		ft_free_tab(pipex->path_tab);
-		pipex->path_tab = 0;
-	}
+	px_re_init(pipex, 0b0100);
 	px_close_fds(pipex);
 	return (0);
 }
