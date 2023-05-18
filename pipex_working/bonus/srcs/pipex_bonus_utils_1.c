@@ -37,6 +37,11 @@ int	px_error(t_pipex *pipex, char *err_message)
 		ft_free_tab(pipex->path_tab);
 		pipex->path_tab = 0;
 	}
+	if (pipex->pid)
+	{
+		ft_lstclear(&(pipex->pid), &ft_free_content);
+		pipex->pid = 0;
+	}
 	px_close_fds(pipex);
 	exit(EXIT_FAILURE);
 }

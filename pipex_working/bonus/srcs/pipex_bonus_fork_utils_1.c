@@ -60,10 +60,11 @@ void	px_fork_loop(t_pipex *pipex)
 	{
 		if (pipe(pipex->pipe))
 			px_error(pipex, "pipe");
-		pipex->pid = fork();
-		if (pipex->pid < 0)
+		//protect this ---v
+		ft_lstadd_back(&(pipex->pid), ft_lstnew_pid(fork()));
+		if (*(pid_t *)((ft_lstlast(pipex->pid))->content) < 0)
 			px_error(pipex, "fork");
-		if (pipex->pid == 0)
+		if (*(pid_t *)((ft_lstlast(pipex->pid))->content) == 0)
 			px_child_process(pipex);
 		else
 		{
@@ -73,6 +74,5 @@ void	px_fork_loop(t_pipex *pipex)
 			pipex->prev_pipe = pipex->pipe[0];
 		}
 		pipex->com_num++;
-		waitpid(pipex->pid, NULL, 0);
 	}
 }

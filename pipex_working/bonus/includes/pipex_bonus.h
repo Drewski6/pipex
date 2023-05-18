@@ -20,11 +20,11 @@
 
 typedef struct s_pipex {
 	int			pipe[2];
-	pid_t		pid;
 	int			argc;
 	int			prev_pipe;
 	int			com_num;
 	int			temp_used;
+	t_list		*pid;
 	char		*hd_limiter;
 	char		**argv;
 	char		**envp;
@@ -61,5 +61,9 @@ void	px_fork_loop(t_pipex *pipex);
 
 //	pipex_heredoc_utils_1.c
 void	px_heredoc(t_pipex *pipex);
+void	px_wait(t_pipex *pipex);
+void	ft_lstpop(t_list **lst, void (*del)(void *));
+void	ft_free_content(void *content);
+t_list	*ft_lstnew_pid(pid_t pid);
 
 #endif

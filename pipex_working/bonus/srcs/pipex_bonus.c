@@ -22,6 +22,7 @@ int	main(int argc, char **argv, char **envp)
 	px_fork_loop(pipex);
 	if (pipex->temp_used == -1)
 		unlink("/tmp/pipex");
+	px_wait(pipex);
 	if (pipex->path_tab)
 	{
 		ft_free_tab(pipex->path_tab);
