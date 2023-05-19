@@ -15,11 +15,16 @@
 int	px_error(t_pipex *pipex, char *err_message)
 {
 	if (ft_strnstr(err_message, "args", 4))
-		ft_putstr_fd("Usage: pipex [infile] ['command'] ... [outfile]\n", 1);
+		ft_putstr_fd("Usage: pipex [infile] ['command1'] \
+['command2'] [outfile]\n", 2);
 	else if (ft_strnstr(err_message, "no_path", 7))
-		ft_putstr_fd("path: No valid path found in envp\n", 1);
-	else if (ft_strnstr(err_message, "here_doc", 8))
-		ft_putstr_fd("here_doc: parse error near 'here_doc'\n", 1);
+		ft_putstr_fd("path: No valid path found in envp\n", 2);
+	else if (ft_strnstr(err_message, pipex->cmd_args[0],
+			ft_strlen(pipex->cmd_args[0])))
+	{
+		ft_putstr_fd(pipex->cmd_args[0], 2);
+		ft_putstr_fd(": command not found\n", 2);
+	}
 	else
 		perror(err_message);
 	px_re_init(pipex, 0b00001111);
@@ -32,12 +37,9 @@ int	px_infile(t_pipex *pipex)
 	int		in_file;
 
 	in_file = 0;
-	if (pipex->hd_limiter)
-		px_heredoc(pipex);
 	if (pipex->temp_used < 0)
 	{
-		if (!pipex->hd_limiter)
-			perror(pipex->argv[1]);
+		perror(pipex->argv[1]);
 		in_file = open("/tmp/pipex", O_CREAT | O_RDONLY, 0666);
 		if (in_file < 0)
 			px_error(pipex, "open");
@@ -59,16 +61,6 @@ int	px_outfile(t_pipex *pipex)
 	char	*fn;
 
 	out_file = 0;
-	if (pipex->hd_limiter)
-	{
-		fn = pipex->argv[pipex->argc - 1];
-		out_file = open(fn, O_CREAT | O_WRONLY | O_APPEND, 0666);
-		if (out_file < 0)
-			px_error(pipex, "open");
-		dup2(out_file, STDOUT_FILENO);
-		close(out_file);
-		return (0);
-	}
 	fn = pipex->argv[pipex->argc - 1];
 	out_file = open(fn, O_CREAT | O_WRONLY | O_TRUNC, 0666);
 	if (out_file < 0)

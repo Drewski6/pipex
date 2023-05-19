@@ -28,10 +28,7 @@ void	px_pre_exec_cleanup(t_pipex *pipex)
 void	px_child_process(t_pipex *pipex)
 {
 	px_exec_args(pipex);
-	if (access(pipex->cmd_abspath, F_OK | X_OK))
-		px_error(pipex, pipex->cmd_args[0]);
-	if ((!pipex->hd_limiter && pipex->com_num == 2)
-		|| (pipex->hd_limiter && pipex->com_num == 3))
+	if (pipex->com_num == 2)
 	{
 		px_infile(pipex);
 		dup2(pipex->pipe[1], STDOUT_FILENO);
@@ -46,16 +43,15 @@ void	px_child_process(t_pipex *pipex)
 		px_outfile(pipex);
 		dup2(pipex->prev_pipe, STDIN_FILENO);
 	}
+	if (access(pipex->cmd_abspath, F_OK | X_OK))
+		px_error(pipex, pipex->cmd_args[0]);
 	px_pre_exec_cleanup(pipex);
 	execve(pipex->cmd_abspath, pipex->cmd_args, pipex->envp);
 }
 
 void	px_fork_loop(t_pipex *pipex)
 {
-	if (pipex->hd_limiter)
-		pipex->com_num = 3;
-	else
-		pipex->com_num = 2;
+	pipex->com_num = 2;
 	while (pipex->com_num < pipex->argc - 1)
 	{
 		if (pipe(pipex->pipe))

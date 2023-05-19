@@ -25,7 +25,6 @@ typedef struct s_pipex {
 	int			com_num;
 	int			temp_used;
 	t_list		*pid;
-	char		*hd_limiter;
 	char		**argv;
 	char		**envp;
 	char		*cmd_abspath;
@@ -47,7 +46,6 @@ int		px_init(t_pipex *pipex, int argc, char **argv, char **envp);
 void	px_re_init(t_pipex *pipex, unsigned char flags);
 int		px_exec_args(t_pipex *pipex);
 void	px_close_fds(t_pipex *pipex);
-void	px_heredoc(t_pipex *pipex);
 
 //	pipex_path_utils_1.c
 void	px_path_tab_add_fw_slash(t_pipex *pipex);
