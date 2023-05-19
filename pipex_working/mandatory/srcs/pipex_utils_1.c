@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:20:54 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/05/09 15:31:54 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:01:06 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,14 @@
 int	px_error(t_pipex *pipex, char *err_message)
 {
 	if (ft_strnstr(err_message, "args", 4))
-		ft_putstr_fd("Usage: pipex [infile] ['command1']\
-['command2'] [outfile]\n", 1);
+		ft_putstr_fd("Usage: pipex [infile] ['command'] ... [outfile]\n", 1);
 	else if (ft_strnstr(err_message, "no_path", 7))
 		ft_putstr_fd("path: No valid path found in envp\n", 1);
+	else if (ft_strnstr(err_message, "here_doc", 8))
+		ft_putstr_fd("here_doc: parse error near 'here_doc'\n", 1);
 	else
 		perror(err_message);
-	if (pipex->cmd_abspath)
-	{
-		free(pipex->cmd_abspath);
-		pipex->cmd_abspath = 0;
-	}
-	if (pipex->cmd_args)
-	{
-		ft_free_tab(pipex->cmd_args);
-		pipex->cmd_args = 0;
-	}
-	if (pipex->path_tab)
-	{
-		ft_free_tab(pipex->path_tab);
-		pipex->path_tab = 0;
-	}
+	px_re_init(pipex, 0b00001111);
 	px_close_fds(pipex);
 	exit(EXIT_FAILURE);
 }
@@ -45,9 +32,12 @@ int	px_infile(t_pipex *pipex)
 	int		in_file;
 
 	in_file = 0;
+	if (pipex->hd_limiter)
+		px_heredoc(pipex);
 	if (pipex->temp_used < 0)
 	{
-		perror(pipex->argv[1]);
+		if (!pipex->hd_limiter)
+			perror(pipex->argv[1]);
 		in_file = open("/tmp/pipex", O_CREAT | O_RDONLY, 0666);
 		if (in_file < 0)
 			px_error(pipex, "open");
@@ -69,6 +59,16 @@ int	px_outfile(t_pipex *pipex)
 	char	*fn;
 
 	out_file = 0;
+	if (pipex->hd_limiter)
+	{
+		fn = pipex->argv[pipex->argc - 1];
+		out_file = open(fn, O_CREAT | O_WRONLY | O_APPEND, 0666);
+		if (out_file < 0)
+			px_error(pipex, "open");
+		dup2(out_file, STDOUT_FILENO);
+		close(out_file);
+		return (0);
+	}
 	fn = pipex->argv[pipex->argc - 1];
 	out_file = open(fn, O_CREAT | O_WRONLY | O_TRUNC, 0666);
 	if (out_file < 0)

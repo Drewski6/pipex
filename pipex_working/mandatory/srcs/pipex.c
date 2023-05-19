@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 12:56:25 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/04/29 16:03:05 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/05/19 13:59:36 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,8 @@ int	main(int argc, char **argv, char **envp)
 	px_fork_loop(pipex);
 	if (pipex->temp_used == -1)
 		unlink("/tmp/pipex");
-	if (pipex->path_tab)
-	{
-		ft_free_tab(pipex->path_tab);
-		pipex->path_tab = 0;
-	}
+	px_wait(pipex);
+	px_re_init(pipex, 0b00000100);
 	px_close_fds(pipex);
 	return (0);
 }
