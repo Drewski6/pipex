@@ -75,14 +75,3 @@ void	px_fork_loop(t_pipex *pipex)
 		pipex->com_num++;
 	}
 }
-
-void	px_add_pid(t_pipex *pipex)
-{
-	t_list	*new_node;
-
-	new_node = 0;
-	new_node = ft_lstnew_pid(fork());
-	if (!new_node)
-		px_error(pipex, "malloc");
-	ft_lstadd_back(&(pipex->pid), new_node);
-}

@@ -39,27 +39,24 @@ int	px_init(t_pipex *pipex, int argc, char **argv, char **envp)
 	return (0);
 }
 
-void	px_re_init(t_pipex *pipex, int flags)
+void	px_re_init(t_pipex *pipex, unsigned char flags)
 {
-	if (pipex->cmd_abspath && flags % 2 == 1)
+	if (pipex->cmd_abspath && flags & 0b00000001)
 	{
 		free(pipex->cmd_abspath);
 		pipex->cmd_abspath = 0;
 	}
-	flags = flags >> 1;
-	if (pipex->cmd_args && flags % 2 == 1)
+	if (pipex->cmd_args && flags & 0b00000010)
 	{
 		ft_free_tab(pipex->cmd_args);
 		pipex->cmd_args = 0;
 	}
-	flags = flags >> 1;
-	if (pipex->path_tab && flags % 2 == 1)
+	if (pipex->path_tab && flags & 0b00000100)
 	{
 		ft_free_tab(pipex->path_tab);
 		pipex->path_tab = 0;
 	}
-	flags = flags >> 1;
-	if (pipex->pid && flags % 2 == 1)
+	if (pipex->pid && flags & 0b00001000)
 	{
 		ft_lstclear(&(pipex->pid), &ft_free_content);
 		pipex->pid = 0;
@@ -82,4 +79,32 @@ void	px_close_fds(t_pipex *pipex)
 	close(pipex->pipe[1]);
 	if (pipex->prev_pipe != -1)
 		close(pipex->prev_pipe);
+}
+
+void	px_heredoc(t_pipex *pipex)
+{
+	char	*stdin_line;
+	int		here_doc;
+
+	here_doc = open("/tmp/pipex", O_CREAT | O_RDWR, 0666);
+	if (here_doc < 0)
+		px_error(pipex, "open");
+	while (1)
+	{
+		write(1, "heredoc> ", 9);
+		stdin_line = get_next_line(0, 0);
+		if (!stdin_line)
+		{
+			close(here_doc);
+			px_error(pipex, "malloc");
+		}
+		if (!ft_strncmp(stdin_line, pipex->hd_limiter,
+				ft_strlen(pipex->hd_limiter)))
+			break ;
+		ft_putstr_fd(stdin_line, here_doc);
+		free(stdin_line);
+	}
+	free(stdin_line);
+	get_next_line(0, 1);
+	close(here_doc);
 }

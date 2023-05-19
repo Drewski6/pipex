@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex_bonus_heredoc_utils_1.c                      :+:      :+:    :+:   */
+/*   pipex_bonus_list_utils_1.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,34 +12,6 @@
 
 #include "pipex_bonus.h"
 
-void	px_heredoc(t_pipex *pipex)
-{
-	char	*stdin_line;
-	int		here_doc;
-
-	here_doc = open("/tmp/pipex", O_CREAT | O_RDWR, 0666);
-	if (here_doc < 0)
-		px_error(pipex, "open");
-	while (1)
-	{
-		write(1, "heredoc> ", 9);
-		stdin_line = get_next_line(0, 0);
-		if (!stdin_line)
-		{
-			close(here_doc);
-			px_error(pipex, "malloc");
-		}
-		if (!ft_strncmp(stdin_line, pipex->hd_limiter,
-				ft_strlen(pipex->hd_limiter)))
-			break ;
-		ft_putstr_fd(stdin_line, here_doc);
-		free(stdin_line);
-	}
-	free(stdin_line);
-	get_next_line(0, 1);
-	close(here_doc);
-}
-
 void	px_wait(t_pipex *pipex)
 {
 	while (pipex->pid)
@@ -47,6 +19,17 @@ void	px_wait(t_pipex *pipex)
 		waitpid(*(pid_t *)(ft_lstlast(pipex->pid)->content), NULL, 0);
 		ft_lstpop(&(pipex->pid), &ft_free_content);
 	}
+}
+
+void	px_add_pid(t_pipex *pipex)
+{
+	t_list	*new_node;
+
+	new_node = 0;
+	new_node = ft_lstnew_pid(fork());
+	if (!new_node)
+		px_error(pipex, "malloc");
+	ft_lstadd_back(&(pipex->pid), new_node);
 }
 
 void	ft_lstpop(t_list **lst, void (*del)(void *))

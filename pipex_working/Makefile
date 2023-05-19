@@ -31,7 +31,7 @@ SRCS_BONUS = pipex_bonus.c \
 	pipex_bonus_utils_2.c \
 	pipex_bonus_path_utils_1.c \
 	pipex_bonus_fork_utils_1.c \
-	pipex_bonus_heredoc_utils_1.c \
+	pipex_bonus_list_utils_1.c \
 
 SRCS_DIR_BONUS = bonus/srcs/
 

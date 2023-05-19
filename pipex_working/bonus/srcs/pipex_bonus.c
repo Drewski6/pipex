@@ -23,7 +23,7 @@ int	main(int argc, char **argv, char **envp)
 	if (pipex->temp_used == -1)
 		unlink("/tmp/pipex");
 	px_wait(pipex);
-	px_re_init(pipex, 0b0100);
+	px_re_init(pipex, 0b00000100);
 	px_close_fds(pipex);
 	return (0);
 }

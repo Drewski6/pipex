@@ -22,7 +22,7 @@ int	px_error(t_pipex *pipex, char *err_message)
 		ft_putstr_fd("here_doc: parse error near 'here_doc'\n", 1);
 	else
 		perror(err_message);
-	px_re_init(pipex, 0b1111);
+	px_re_init(pipex, 0b00001111);
 	px_close_fds(pipex);
 	exit(EXIT_FAILURE);
 }

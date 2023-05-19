@@ -58,6 +58,4 @@ void	px_pre_exec_cleanup(t_pipex *pipex);
 void	px_child_process(t_pipex *pipex);
 void	px_fork_loop(t_pipex *pipex);
 
-//	pipex_heredoc_utils_1.c
-
 #endif
