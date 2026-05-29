@@ -6,7 +6,7 @@
 /*   By: dpentlan <dpentlan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 12:56:25 by dpentlan          #+#    #+#             */
-/*   Updated: 2023/04/29 16:03:05 by dpentlan         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:20:46 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,4 @@ int	main(int argc, char **argv, char **envp)
 	px_close_fds(pipex);
 	return (0);
 }
+
